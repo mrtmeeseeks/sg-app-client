@@ -11,41 +11,42 @@ export class InternshipsController {
 
     this.internshipsArray = [
       {
-        name: "Internship 1",
+        name: "Internship in Centroida",
         id: "1",
-        description: "best internship on earth",
-        link: "www.pornhub.com"
+        description: "Front End developer",
+        link: "centroida.co"
       },
       {
-        name: "Internship 1",
-        id: "2",
-        description: "best internship on earth",
-        link: "www.pornhub.com"
+        name: "Internship in Centroida",
+        id: "1",
+        description: "Back End developer",
+        link: "centroida.co"
       },
       {
-        name: "Internship 1",
-        id: "3",
-        description: "best internship on earth",
-        link: "www.pornhub.com"
+        name: "Internship in Centroida",
+        id: "1",
+        description: "iOS developer",
+        link: "centroida.co"
       },
       {
-        name: "Internship 1",
-        id: "4",
-        description: "best internship on earth",
-        link: "www.pornhub.com"
+        name: "Internship in Centroida",
+        id: "1",
+        description: "Android developer",
+        link: "centroida.co"
       },
       {
-        name: "Internship 1",
-        id: "5",
-        description: "best internship on earth",
-        link: "www.pornhub.com"
+        name: "Internship in Centroida",
+        id: "1",
+        description: "php developer",
+        link: "centroida.co"
       },
       {
-        name: "Internship 1",
-        id: "6",
-        description: "best internship on earth",
-        link: "www.pornhub.com"
+        name: "Internship in Centroida",
+        id: "1",
+        description: "marketing",
+        link: "centroida.co"
       }
+
     ];
 
     //todo: API request body?
@@ -67,7 +68,7 @@ export class InternshipsController {
   addInternship() {
     this.$modal.open({
       animation: true,
-      templateUrl: 'app/views_controllers/internships/addInternship/addInternship.html',
+      templateUrl: 'app/adminPanel/components/internships/addInternship/addInternship.html',
       controller: 'AddInternshipController',
       controllerAs: 'aic',
       size: 'md'

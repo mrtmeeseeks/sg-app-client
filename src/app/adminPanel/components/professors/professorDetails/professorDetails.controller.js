@@ -45,7 +45,7 @@ export class ProfessorDetailsController {
 
   deleteProfessor(professorId) {
     SERVICE.get(this).delete({professorId: professorId}).$promise.then((result)=> {
-      this.$state.go('professors');
+      this.$state.go('adminPanel.professors');
       console.log('finally deleted');
     }, (error)=> {
       console.log(error);

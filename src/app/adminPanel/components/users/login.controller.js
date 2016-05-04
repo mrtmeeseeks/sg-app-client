@@ -31,7 +31,7 @@ export class LoginController {
 
         //console.log(result);
         STATE.get(this).go('adminPanel.dashboard');
-        TOASTR.get(this).success("Влязохте успешно!");
+        TOASTR.get(this).success("Login Successful!");
 
       }
     );

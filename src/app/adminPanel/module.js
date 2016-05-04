@@ -19,6 +19,7 @@ import { ClubsService } from './components/clubs/clubs.service';
 import { AuthInterceptor } from './components/users/authInterceptor.service'; //intercept http requests and put tokens on them
 import { NavbarDirective } from './directives/navbar/navbar.directive';
 import { MenuButtonDirective } from './directives/menuButton/menuButton.directive';
+import { InternshipDirective } from './components/internships/internship.directive'
 var adminModule = 'adminPanel';
  angular.module(adminModule , [ 'ngAnimate', 'ngSanitize', 'ngResource', 'ui.router', 'ui.bootstrap', 'toastr', 'ngFileUpload'])
   .constant('api', "http://sgaubg.herokuapp.com/api/")

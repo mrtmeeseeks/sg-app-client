@@ -11,26 +11,30 @@
             .form-group
               input.form-control(type='text', ng-model='team.searchBox', placeholder='Search')
           .col-md-4
-            button(ng-click='team.addMember()')  Add Team Member
+            button.btn.btn-info(ng-click='team.addMember()')  Add Team Member
+        h1 Team Members
+        br
         // ----------------- TEAM LIST ------------------
         .team
           ul
-            li(ng-repeat='member in team.teamMembersArray | filter:team.searchBox')
-              form(ng-show='!editing', ng-submit='editing = true')
-                img(src='http://lorempixum.com/100/100/nature/1')
+            li.media(ng-repeat='member in team.teamMembersArray | filter:team.searchBox')
+              .media-left.media-middle(ng-show='!editing')
+                  img.media-object.img-thumbnail(src='http://lorempixum.com/100/100/nature/1')
+              .media-body
                 h3 {{ member.name}}
                 p {{member.description}}
-                button.btn.btn-primary.pull-right(ng-hide='editing', type='submit') Edit
-              // --------------  EDITING MODE ---------------
-              form(ng-show='editing', ng-submit='editing = false')
-                label Name:
-                input(type='text', ng-model='member.name', placeholder='Name', ng-required='')
-                label Description:
-                input(type='text', ng-model='member.description', placeholder='Description', ng-required='')
-                br
-                button.btn.btn-success(type='submit') Save
-                button.btn.btn-danger(type='button', ng-click='team.deleteTeamMember(member.id)')
-                  | Delete
+                button.btn.btn-primary.pull-right(ng-hide='editing', ng-click='editing = true') Edit
+
+                // --------------  EDITING MODE ---------------
+                .media(ng-show='editing')
+                  label Name:
+                  input(type='text', ng-model='member.name', placeholder='Name', ng-required='')
+                  label Description:
+                  input(type='text', ng-model='member.description', placeholder='Description', ng-required='')
+                  br
+                  button.btn.btn-success(type='submit' ng-click='editing = false') Save
+                  button.btn.btn-danger(type='button', ng-click='team.deleteTeamMember(member.id)')
+                    | Delete
         // team list finish
         // ---------------- PAGINATION ----------------
         // <pagination

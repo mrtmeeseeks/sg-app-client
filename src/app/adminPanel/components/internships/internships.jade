@@ -11,26 +11,28 @@
             .form-group
               input.form-control(type='text', ng-model='internCtrl.searchBox', placeholder='Search')
           .col-md-4
-            button(ng-click='internCtrl.addInternship()')  Add Internship
+            button.btn.btn-info(ng-click='internCtrl.addInternship()')  Add Internship
+        h1 Internships
+        br
         // ------------ INTERNSHIPS LIST  ----------
         .team
-          div
-            ul
-              li(ng-repeat='internship in internCtrl.internshipsArray')
-                form(ng-show='!editing', ng-submit='editing = true')
-                  img(src='http://lorempixum.com/100/100/nature/1')
-                  h3 {{ internship.name}}
-                  p {{ internship.description}}
-                  p link: {{ internship.link}}
-                  button.btn.btn-primary.pull-right(ng-hide='editing', type='submit') Edit
-                // ------------   EDITING MODE   ---------------
-                form(ng-show='editing', ng-submit='editing = false')
-                  label Name:
-                  input(type='text', ng-model='internship.name', placeholder='Name', ng-required='')
-                  label Description:
-                  input(type='text', ng-model='internship.description', placeholder='Description', ng-required='')
-                  br
-                  button.btn.btn-success(type='submit') Save
-                  button.btn.btn-danger(type='button', ng-click='internCtrl.deleteInternship(internship.id)')
-                    | Delete
+          ul
+            li.media(ng-repeat='internship in internCtrl.internshipsArray')
+              .media-left.media-middle(ng-show='!editing')
+                img.media-object.img-thumbnail(src='http://aubgdaily.com/wp-content/uploads/2016/02/11222554_920521337993768_8737599551130293310_o.jpg')
+              .media-body
+                h3 {{ internship.name}}
+                p {{ internship.description}}
+                p link: {{ internship.link}}
+                button.btn.btn-primary.pull-right(ng-hide='editing', ng-click="editing=true" type='submit') Edit
+              // ------------   EDITING MODE   ---------------
+              form(ng-show='editing', ng-submit='editing = false')
+                label Name:
+                input(type='text', ng-model='internship.name', placeholder='Name', ng-required='')
+                label Description:
+                input(type='text', ng-model='internship.description', placeholder='Description', ng-required='')
+                br
+                button.btn.btn-success(type='submit') Save
+                button.btn.btn-danger(type='button', ng-click='internCtrl.deleteInternship(internship.id)')
+                  | Delete
 

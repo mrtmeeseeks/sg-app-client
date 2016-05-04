@@ -1,11 +1,11 @@
 .modal-header
-  h3.modal-title Registration Form
+  h3.modal-title Add Professor
 form(name='apr.registrationForm', role='form', ng-submit='apr.addNewProfessor(apr.newProfessor, apr.picFile)', novalidate='')
   .modal-body
     .form-group.row(ng-class="{ 'has-error' : apr.registrationForm.name.$error.required && apr.registrationForm.name.$dirty }")
       label.col-md-2.control-label(for='name') Name
       .col-md-10
-        input#name.form-control(type='text', ng-model='apr.newProfessor.name', name='name', placeholder='name', required='')
+        input#name.form-control(type='text', ng-model='apr.newProfessor.name', name='name', placeholder='', required='')
         span.help-block(ng-show='apr.registrationForm.name.$error.required  && !apr.registrationForm.name.$pristine') Please enter your name!
     .form-group.row(ng-class="{ 'has-error' : apr.registrationForm.department.$error.required}")
       label.col-md-2.control-label(for='department') Department:

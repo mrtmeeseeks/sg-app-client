@@ -22,12 +22,12 @@ export class TeamController {
 
     this.teamMembersArray = [
       {
-        name: "teo",
-        description: "14teo e backend dev"
+        name: "Jonathan Kikimena",
+        description: "this guy is a backend developer"
       },
       {
-        name: "teo",
-        description: "15teo e meteor dev"
+        name: "Rosen Plevneyev",
+        description: "Lorem Ipsum dolor sit amet"
       }
     ];
 
@@ -54,7 +54,7 @@ export class TeamController {
   addMember() {
     this.$modal.open({
       animation: true,
-      templateUrl: 'app/views_controllers/team/addTeamMember/addTeamMember.html',
+      templateUrl: 'app/adminPanel/components/team_members/addTeamMember/addTeamMember.html',
       controller: 'AddTeamMemberController',
       controllerAs: 'atm',
       size: 'md'

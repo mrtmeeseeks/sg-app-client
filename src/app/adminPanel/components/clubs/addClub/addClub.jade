@@ -1,5 +1,5 @@
 .modal-header
-  h3.modal-title Registration Form
+  h3.modal-title Add Club
 form(name='acc.registrationForm', role='form', ng-submit='acc.register(acc.user)', novalidate='')
   .modal-body
     .form-group.row(ng-class="{ 'has-error' : acc.registrationForm.name.$error.required && acc.registrationForm.name.$dirty }")

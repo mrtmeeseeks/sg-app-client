@@ -68,7 +68,7 @@ export class ProfessorsController {
   addProfessor() {
     this.$modal.open({
       animation: true,
-      templateUrl: 'app/views_controllers/professors/addProfessor/addProfessor.html',
+      templateUrl: 'app/adminPanel/components/professors/addProfessor/addProfessor.html',
       controller: 'AddProfessorController',
       controllerAs: 'apr',
       size: 'md'

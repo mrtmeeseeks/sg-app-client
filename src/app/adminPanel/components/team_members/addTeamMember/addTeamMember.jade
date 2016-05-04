@@ -1,5 +1,5 @@
 .modal-header
-  h3.modal-title Registration Form
+  h3.modal-title Add Team Member
 form(name='atm.registrationForm', role='form', ng-submit='atm.register(atm.user)', novalidate='')
   .modal-body
     .form-group.row(ng-class="{ 'has-error' : atm.registrationForm.name.$error.required && atm.registrationForm.name.$dirty }")

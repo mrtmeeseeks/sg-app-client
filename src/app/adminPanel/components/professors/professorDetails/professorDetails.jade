@@ -4,7 +4,7 @@
     // Page Content
     #page-content-wrapper
       .container-fluid
-        button.btn.btn-default(ng-show='!editing', ui-sref='professors')  Back to Professors
+        button.btn.btn-default(ng-show='!editing', ui-sref='adminPanel.professors')  Back to Professors
         form(ng-show='!editing')
           .media-left.media-middle
             img.media-object.img-thumbnail(ng-src='{{ profDetail.professorDetails.photo }}')
