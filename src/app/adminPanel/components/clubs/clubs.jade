@@ -1,0 +1,25 @@
+.container-fluid
+  #wrapper
+    acme-navbar
+    // Page Content
+    #page-content-wrapper
+      .container-fluid
+        // -------------- HEADER ---------------
+        .row
+          menu-button
+          .col-md-4
+          .col-md-4
+            button.btn.btn-info(ng-click='clubsCtrl.addClub()')  Add Club
+        // --------------  CLUB LIST  ---------------
+        .team
+          ul
+            li(ng-repeat='club in clubsCtrl.clubs')
+              .media-left.media-middle
+                //img.media-object.img-thumbnail(ng-src='{{ professor.photo }}')
+              .media-body
+                h3.media-heading {{ club.name}}
+                button.btn.btn-primary.pull-right(type='button', ui-sref='adminPanel.clubDetails({professorId: professor.id})') View Details
+
+
+
+

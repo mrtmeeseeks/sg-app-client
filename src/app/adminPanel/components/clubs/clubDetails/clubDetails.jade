@@ -1,0 +1,31 @@
+.container-fluid
+  #wrapper
+    acme-navbar
+    // Page Content
+    #page-content-wrapper
+      .container-fluid
+        button.btn.btn-default(ng-show='!editing', ui-sref='clubs')  back to clubs
+        // -------------   CLUB BODY   --------------
+        form(ng-show='!editing', ng-submit='editing = true')
+          .row
+            .col-md-4
+              img(src='http://nxworld.net/codepen/css-image-hover-effects/pic03.jpg', alt='')
+            .col-md-6
+              h1  {{ clubDetail.club.name }} something
+              p  President: {{ clubDetail.club.president }} the rosen plevneyev
+              p  Professor: {{ clubDetail.club.professor }} advisor of the club
+          button.btn.btn-primary.pull-right(type='submit') Edit
+        // ------------   EDITING MODE   -------------
+        form(ng-show='editing', ng-submit='editing = false')
+          label Name of the club:
+          input(type='text', ng-model='clubDetail.club.name', placeholder='Name', ng-required='')
+          label President of the club:
+          input(type='text', ng-model='clubDetail.club.president', placeholder='President', ng-required='')
+          label Professor:
+          input(type='text', ng-model='clubDetail.club.professor', placeholder='Professor', ng-required='')
+          label Description of the club:
+          input(type='text', ng-model='', placeholder='Description', ng-required='')
+          br
+          button.btn.btn-success(type='submit') Save
+          button.btn.btn-danger(type='button', ng-click='clubDetail.deleteClub(clubDetail.club.id)')
+            | Delete

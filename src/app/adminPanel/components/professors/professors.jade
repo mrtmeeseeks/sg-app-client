@@ -1,0 +1,45 @@
+.container-fluid
+    #wrapper
+      acme-navbar
+      // Page Content
+      #page-content-wrapper
+        .container-fluid
+          .row
+            menu-button
+            .col-md-4
+              .form-group
+                input.form-control(type='text', ng-model='prof.searchBox', placeholder='Search')
+            .col-md-4
+              button(ng-click='prof.addProfessor()')  Add Professor
+          // NAVIGATION
+          ul.media-list(tab-pane='', fade='', in='', active='')
+            ul.nav.nav-tabs(role='tablist')
+              li(role='presentation', ng-class='{active:isSelected(1)}')
+                a(ng-click='prof.select(1)', aria-controls='all menu', role='tab') All departments
+              li(role='presentation', ng-class='{active:isSelected(2)}')
+                a(ng-click='prof.select(2)', aria-controls='appetizers', role='tab') COS
+              li(role='presentation', ng-class='{active:isSelected(3)}')
+                a(ng-click='prof.select(3)', aria-controls='mains', role='tab') ECO
+              li(role='presentation', ng-class='{active:isSelected(4)}')
+                a(ng-click='prof.select(4)', aria-controls='desserts', role='tab') MAT
+            // ------------- PROFESSORS LIST --------------
+            .team
+              div
+                ul
+                  li.media(ng-repeat='professor in prof.professorsArray | filter: prof.filtText |filter:prof.searchBox')
+                    .media-left.media-middle
+                      img.media-object.img-thumbnail(ng-src='{{ professor.photo }}')
+                    .media-body
+                      h3.media-heading {{ professor.name}}
+                      p.label.label-danger {{ professor.department }}
+                      // <p>{{ professor.description }}</p> todo: add professor description in the api
+                      button.btn.btn-primary.pull-right(type='button', ui-sref='adminPanel.professorDetails({professorId: professor.id})') View Details
+            // professors list finish
+          // pagination
+          // <pagination
+          // ng-model="prof.currentPage"
+          // total-items="(prof.professorsArray | filter: prof.filtText |filter:prof.searchBox).length"
+          // max-size="prof.maxSize"
+          // boundary-links="true"
+          // ng-change="prof.pageChanged()">
+          // </pagination>

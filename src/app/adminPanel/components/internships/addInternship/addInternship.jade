@@ -1,0 +1,23 @@
+.modal-header
+  h3.modal-title Registration Form
+form(name='aic.registrationForm', role='form', ng-submit='aic.register(aic.user)', novalidate='')
+  .modal-body
+    .form-group.row(ng-class="{ 'has-error' : aic.registrationForm.name.$error.required && aic.registrationForm.name.$dirty }")
+      label.col-md-2.control-label(for='name') Name
+      .col-md-10
+        input#name.form-control(type='text', ng-model='aic.user.name', name='name', placeholder='name', required='')
+        span.help-block(ng-show='aic.registrationForm.name.$error.required  && !aic.registrationForm.name.$pristine') Please enter your name!
+    .form-group.row(ng-class="{ 'has-error' : aic.registrationForm.description.$error.required && aic.registrationForm.description.$dirty }")
+      label.col-md-2.control-label(for='description') Description
+      .col-md-10
+        input#description.form-control(type='text', ng-model='aic.user.description', name='description', placeholder='Description', required='')
+        span.help-block(ng-show='aic.registrationForm.description.$error.required  && !aic.registrationForm.description.$pristine') Please enter the description!
+    .form-group.row(ng-class="{ 'has-error' : aic.registrationForm.link.$error.required && aic.registrationForm.link.$dirty }")
+      label.col-md-2.control-label(for='link') Link
+      .col-md-10
+        input#link.form-control(type='text', ng-model='aic.user.link', name='link', placeholder='Link', required='')
+        span.help-block(ng-show='aic.registrationForm.link.$error.required  && !aic.registrationForm.link.$pristine') Please enter the link!
+  // --------- END MODAL BODY -------------
+  .modal-footer
+    button.btn.btn-primary(ng-disabled='aic.registrationForm.$invalid', type='submit') Register
+    button.btn.btn-warning(type='button', ng-click='aic.cancel()') Cancel

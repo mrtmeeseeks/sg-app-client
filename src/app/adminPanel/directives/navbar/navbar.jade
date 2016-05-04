@@ -1,0 +1,16 @@
+#sidebar-wrapper
+  ul.sidebar-nav
+    li.sidebar-brand
+      a(ui-sref='home')
+        img(src='../../../assets/images/logo2.png', alt='')
+        span(style='font-size: 24px;')    Admin Panel
+    li(ui-sref-active='activeNavbar')
+      a(ui-sref='adminPanel.team') Team Members
+    li(ui-sref-active='activeNavbar')
+      a(ui-sref='adminPanel.professors') Professors
+    li(ui-sref-active='activeNavbar')
+      a(ui-sref='adminPanel.clubs') Clubs
+    li(ui-sref-active='activeNavbar')
+      a(ui-sref='adminPanel.internships') Internships
+    li
+      a(ng-click='vm.logout()', ui-sref='login') Logout

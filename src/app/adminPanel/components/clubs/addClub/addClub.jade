@@ -1,0 +1,23 @@
+.modal-header
+  h3.modal-title Registration Form
+form(name='acc.registrationForm', role='form', ng-submit='acc.register(acc.user)', novalidate='')
+  .modal-body
+    .form-group.row(ng-class="{ 'has-error' : acc.registrationForm.name.$error.required && acc.registrationForm.name.$dirty }")
+      label.col-md-2.control-label(for='name') Name
+      .col-md-10
+        input#name.form-control(type='text', ng-model='acc.user.name', name='name', placeholder='name', required='')
+        span.help-block(ng-show='acc.registrationForm.name.$error.required  && !acc.registrationForm.name.$pristine') Please enter your name!
+    .form-group.row(ng-class="{ 'has-error' : acc.registrationForm.president.$error.required && acc.registrationForm.president.$dirty }")
+      label.col-md-2.control-label(for='president') President
+      .col-md-10
+        input#president.form-control(type='text', ng-model='acc.user.president', name='president', placeholder='President of the Club', required='')
+        span.help-block(ng-show='acc.registrationForm.president.$error.required  && !acc.registrationForm.president.$pristine') Please enter the president's name!
+    .form-group.row(ng-class="{ 'has-error' : acc.registrationForm.professorId.$error.required && acc.registrationForm.professorId.$dirty }")
+      label.col-md-2.control-label(for='professorId') Professor ID
+      .col-md-10
+        input#professorId.form-control(type='text', ng-model='acc.user.professorId', name='professorId', placeholder='Professor ID', required='')
+        span.help-block(ng-show='acc.registrationForm.professorId.$error.required  && !acc.registrationForm.professorId.$pristine') Please enter the professor's ID!
+  // ---------- END MODAL BODY ------------
+  .modal-footer
+    button.btn.btn-primary(ng-disabled='acc.registrationForm.$invalid', type='submit') Register
+    button.btn.btn-warning(type='button', ng-click='acc.cancel()') Cancel

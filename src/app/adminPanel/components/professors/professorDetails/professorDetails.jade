@@ -1,0 +1,63 @@
+.container-fluid
+  #wrapper
+    acme-navbar
+    // Page Content
+    #page-content-wrapper
+      .container-fluid
+        button.btn.btn-default(ng-show='!editing', ui-sref='professors')  Back to Professors
+        form(ng-show='!editing')
+          .media-left.media-middle
+            img.media-object.img-thumbnail(ng-src='{{ profDetail.professorDetails.photo }}')
+          .media-body
+            h3.media-heading {{ profDetail.professorDetails.name}}
+            p.label.label-danger {{ profDetail.professorDetails.department }}
+            // <p>{{ professor.description }}</p>
+            button.btn.btn-primary.pull-right(type='button', ng-click='editing = true; show=true') Edit
+        // -----------------  EDITING MODE  ----------------------
+        form(ng-show='editing', name='profDetail.editingForm', role='form', ng-submit='editing = false')
+          label Name:
+          input(type='text', ng-model='profDetail.professorDetails.name', placeholder='Name', ng-required='')
+          label Department:
+          select#department.form-control(ng-model='profDetail.professorDetails.department', required='')
+            option cos
+            option inf
+            option mat
+            option jmc
+            option pos
+            option eco
+            option bus
+          // <label>Description:</label>
+          // <input type="text" ng-model="profDetail.professorDetails.description" placeholder="Description" ng-required/>
+          br
+          // <img ng-show="show" ng-src="{{ profDetail.professorDetails.photo }}" class="img-thumbnail" alt="">
+          input(id='', type='file', ng-click='show=false', ngf-select='', ng-model='profDetail.picFile', name='file', accept='image/*', ngf-max-size='2MB', ngf-model-invalid='errorFile')
+          i(ng-show='profDetail.editingForm.file.$error.required') *required
+          br
+          img.img-thumbnail(ng-show='profDetail.editingForm.file.$valid', ngf-thumbnail='profDetail.picFile || profDetail.professorDetails.photo')
+          a.btn.btn-danger(ng-click='profDetail.picFile = null', ng-show='profDetail.picFile') Remove
+          br
+          a.btn.btn-default(ng-show='profDetail.picFile', ng-click='profDetail.uploadPic(profDetail.picFile)') Upload
+          span.progress(ng-show='profDetail.picFile.progress >= 0')
+            div(ng-bind="'Uploaded Succesfully'")
+          button.btn.btn-success(ng-click='profDetail.saveProfessorEditing(profDetail.professorDetails.id)', type='submit')
+            | Save
+          button.btn.btn-danger(type='button', ng-click='profDetail.deleteProfessor(profDetail.professorDetails.id)')
+            | Delete
+        // ------------------ EVALUATIONS --------------------
+        .row.team(ng-show='!editing')
+          br
+          br
+          h1 Student Evaluations of teaching
+          ul
+            li
+              span
+                strong Edor Kacerja:
+              |  i cant believe i pay $22/class with this professor.
+            li
+              span
+                strong Edor Kacerja:
+              |  i cant believe i pay $22/class with this professor.
+            li
+              span
+                strong Edor Kacerja:
+              |  i cant believe i pay $22/class with this professor.

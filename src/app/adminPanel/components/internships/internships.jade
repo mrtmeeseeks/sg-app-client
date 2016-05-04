@@ -1,0 +1,36 @@
+.container-fluid
+  #wrapper
+    acme-navbar
+    // Page Content
+    #page-content-wrapper
+      .container-fluid
+        // ------------  HEADER  -------------
+        .row
+          menu-button
+          .col-md-4
+            .form-group
+              input.form-control(type='text', ng-model='internCtrl.searchBox', placeholder='Search')
+          .col-md-4
+            button(ng-click='internCtrl.addInternship()')  Add Internship
+        // ------------ INTERNSHIPS LIST  ----------
+        .team
+          div
+            ul
+              li(ng-repeat='internship in internCtrl.internshipsArray')
+                form(ng-show='!editing', ng-submit='editing = true')
+                  img(src='http://lorempixum.com/100/100/nature/1')
+                  h3 {{ internship.name}}
+                  p {{ internship.description}}
+                  p link: {{ internship.link}}
+                  button.btn.btn-primary.pull-right(ng-hide='editing', type='submit') Edit
+                // ------------   EDITING MODE   ---------------
+                form(ng-show='editing', ng-submit='editing = false')
+                  label Name:
+                  input(type='text', ng-model='internship.name', placeholder='Name', ng-required='')
+                  label Description:
+                  input(type='text', ng-model='internship.description', placeholder='Description', ng-required='')
+                  br
+                  button.btn.btn-success(type='submit') Save
+                  button.btn.btn-danger(type='button', ng-click='internCtrl.deleteInternship(internship.id)')
+                    | Delete
+

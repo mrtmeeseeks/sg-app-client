@@ -1,0 +1,21 @@
+.container-fluid.login
+  .login-page
+    .form
+      h1
+        img(src='../../../assets/images/logo2.png', alt='')
+        |  Student Government
+      br
+      //
+        <form class="register-form">
+        <input ng-model="regUser.username" type="text" placeholder="username"/>
+        <input ng-model="regUser.password" type="password" placeholder="password"/>
+        <input ng-model="regUser.email" type="text" placeholder="email address"/>
+        <button ng-click="login.register(regUser)">create</button>
+        <p class="message">Already registered? <a ng-click="login.change()" href="#">Sign In</a></p><br>
+        </form>
+      form.login-form
+        input(type='text', ng-model='user.email', placeholder='email')
+        input(type='password', ng-model='user.password', placeholder='password')
+        br
+        button(ng-click='login.login(user)')  login
+        // <p class="message">Not registered? <a ng-click="login.change()" href="#">Create an account</a></p><br>

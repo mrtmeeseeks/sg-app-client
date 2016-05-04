@@ -1,0 +1,18 @@
+.modal-header
+  h3.modal-title Registration Form
+form(name='atm.registrationForm', role='form', ng-submit='atm.register(atm.user)', novalidate='')
+  .modal-body
+    .form-group.row(ng-class="{ 'has-error' : atm.registrationForm.name.$error.required && atm.registrationForm.name.$dirty }")
+      label.col-md-2.control-label(for='name') Name
+      .col-md-10
+        input#name.form-control(type='text', ng-model='atm.user.name', name='name', placeholder='name', required='')
+        span.help-block(ng-show='atm.registrationForm.name.$error.required  && !atm.registrationForm.name.$pristine') Please enter your name!
+    .form-group.row(ng-class="{ 'has-error' : atm.registrationForm.description.$error.required && atm.registrationForm.description.$dirty }")
+      label.col-md-2.control-label(for='description') Description
+      .col-md-10
+        input#description.form-control(type='text', ng-model='atm.user.description', name='description', placeholder='Description', required='')
+        span.help-block(ng-show='atm.registrationForm.description.$error.required  && !atm.registrationForm.description.$pristine') Please enter the description!
+  // -------   END MODAL BODY  ---------
+  .modal-footer
+    button.btn.btn-primary(ng-disabled='atm.registrationForm.$invalid', type='submit') Register
+    button.btn.btn-warning(type='button', ng-click='atm.cancel()') Cancel

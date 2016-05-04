@@ -1,0 +1,42 @@
+.container-fluid
+  #wrapper
+    acme-navbar
+    // Page Content
+    #page-content-wrapper
+      .container-fluid
+        // -------------- HEADER ---------------
+        .row
+          menu-button
+          .col-md-4
+            .form-group
+              input.form-control(type='text', ng-model='team.searchBox', placeholder='Search')
+          .col-md-4
+            button(ng-click='team.addMember()')  Add Team Member
+        // ----------------- TEAM LIST ------------------
+        .team
+          ul
+            li(ng-repeat='member in team.teamMembersArray | filter:team.searchBox')
+              form(ng-show='!editing', ng-submit='editing = true')
+                img(src='http://lorempixum.com/100/100/nature/1')
+                h3 {{ member.name}}
+                p {{member.description}}
+                button.btn.btn-primary.pull-right(ng-hide='editing', type='submit') Edit
+              // --------------  EDITING MODE ---------------
+              form(ng-show='editing', ng-submit='editing = false')
+                label Name:
+                input(type='text', ng-model='member.name', placeholder='Name', ng-required='')
+                label Description:
+                input(type='text', ng-model='member.description', placeholder='Description', ng-required='')
+                br
+                button.btn.btn-success(type='submit') Save
+                button.btn.btn-danger(type='button', ng-click='team.deleteTeamMember(member.id)')
+                  | Delete
+        // team list finish
+        // ---------------- PAGINATION ----------------
+        // <pagination
+        // ng-model="team.currentPage"
+        // total-items="(team.teamMembers | filter:team.searchBox).length"
+        // max-size="team.maxSize"
+        // boundary-links="true"
+        // ng-change="team.pageChanged()">
+        // </pagination>
