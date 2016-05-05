@@ -18,21 +18,5 @@
         .team
           ul
             li.media(ng-repeat='internship in internCtrl.internshipsArray')
-              .media-left.media-middle(ng-show='!editing')
-                img.media-object.img-thumbnail(src='http://aubgdaily.com/wp-content/uploads/2016/02/11222554_920521337993768_8737599551130293310_o.jpg')
-              .media-body
-                h3 {{ internship.name}}
-                p {{ internship.description}}
-                p link: {{ internship.link}}
-                button.btn.btn-primary.pull-right(ng-hide='editing', ng-click="editing=true" type='submit') Edit
-              // ------------   EDITING MODE   ---------------
-              form(ng-show='editing', ng-submit='editing = false')
-                label Name:
-                input(type='text', ng-model='internship.name', placeholder='Name', ng-required='')
-                label Description:
-                input(type='text', ng-model='internship.description', placeholder='Description', ng-required='')
-                br
-                button.btn.btn-success(type='submit') Save
-                button.btn.btn-danger(type='button', ng-click='internCtrl.deleteInternship(internship.id)')
-                  | Delete
+              internship(model="internship")
 

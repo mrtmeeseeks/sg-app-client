@@ -77,14 +77,5 @@ export class InternshipsController {
 
 
 
-  deleteInternship(internshipId) {
-    if (this.$window.confirm('You sure you want to delete this member?')) {
-      SERVICE.get(this).delete({internshipId: internshipId}).$promise.then(() => {
-        },
-        (error) => {
-          console.log(error.statusText);
-        });
-    }
-  }
 
 }

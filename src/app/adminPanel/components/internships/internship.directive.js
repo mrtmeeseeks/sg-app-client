@@ -7,7 +7,7 @@ export function InternshipDirective() {
 
   let directive = {
     restrict: 'E',
-    templateUrl: 'app/adminPanel/components/internships/internship.partial.html',
+    templateUrl: 'app/adminPanel/components/internships/internship.html',
     scope: {
       model: '='
     },
@@ -19,13 +19,25 @@ export function InternshipDirective() {
   return directive;
 }
 
-class InternshipController {
-  constructor( $window , InternshipsService) {
+class InternshipController{
+  constructor( $window , InternshipsService , $scope) {
     'ngInject';
-
+    SERVICE.set(this, InternshipsService.resource);
     this.$window = $window;
+
+
   }
 
+
+  delete() {
+    if (this.$window.confirm('You sure you want to delete this internship?')) {
+      SERVICE.get(this).delete({internshipId: this.model.id}).$promise.then(() => {
+        },
+        (error) => {
+          console.log(error.statusText);
+        });
+    }
+  }
 
 
 

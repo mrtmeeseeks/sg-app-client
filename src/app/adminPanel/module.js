@@ -43,6 +43,8 @@ var adminModule = 'adminPanel';
   .controller('ProfessorDetailsController', ProfessorDetailsController)
   .controller('ClubDetailsController', ClubDetailsController)
   .directive('acmeNavbar', NavbarDirective)
-  .directive('menuButton', MenuButtonDirective);
+  .directive('menuButton', MenuButtonDirective)
+  .directive('internship', InternshipDirective)
+ ;
 
 export default adminModule;

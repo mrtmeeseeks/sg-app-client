@@ -3,7 +3,7 @@ div(ng-show='!editing', ng-submit='editing = true')
   h3 {{ int.model.name}}
   p {{ int.model.description}}
   p link: {{ int.model.link}}
-  button.btn.btn-primary.pull-right(ng-hide='editing', type='submit') Edit
+  button.btn.btn-primary.pull-right(ng-hide='editing', ng-click='editing = true') Edit
 // ------------   EDITING MODE   ---------------
 form(ng-show='editing', ng-submit='editing = false')
   label Name:
