@@ -20,21 +20,27 @@
             li.media(ng-repeat='member in team.teamMembersArray | filter:team.searchBox')
               .media-left.media-middle(ng-show='!editing')
                   img.media-object.img-thumbnail(src='http://lorempixum.com/100/100/nature/1')
-              .media-body
+              .media-body(ng-show='!editing')
                 h3 {{ member.name}}
                 p {{member.description}}
                 button.btn.btn-primary.pull-right(ng-hide='editing', ng-click='editing = true') Edit
 
                 // --------------  EDITING MODE ---------------
-                .media(ng-show='editing')
+              .media-left.media-middle(ng-show='editing')
+                img.media-object.img-thumbnail(src='http://lorempixum.com/100/100/nature/1')
+              .media-body(ng-show='editing')
+                p
                   label Name:
-                  input(type='text', ng-model='member.name', placeholder='Name', ng-required='')
+                  input.form-control(type='text', ng-model='member.name', placeholder='Name', ng-required='')
+                p
                   label Description:
-                  input(type='text', ng-model='member.description', placeholder='Description', ng-required='')
-                  br
-                  button.btn.btn-success(type='submit' ng-click='editing = false') Save
-                  button.btn.btn-danger(type='button', ng-click='team.deleteTeamMember(member.id)')
-                    | Delete
+                  input.form-control(type='text', ng-model='member.description', placeholder='Description', ng-required='')
+                br
+                //todo: save implementation and cancel implementation
+                button.btn.btn-success(type='submit' ng-click='editing = false' ) Save
+                button.btn.btn-info(type='submit' ng-click='editing = false') Cancel
+                button.btn.btn-danger.pull-right(type='button', ng-click='team.deleteTeamMember(member.id)')
+                  | Delete
         // team list finish
         // ---------------- PAGINATION ----------------
         // <pagination
