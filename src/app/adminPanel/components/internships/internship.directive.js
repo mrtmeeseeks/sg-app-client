@@ -20,7 +20,7 @@ export function InternshipDirective() {
 }
 
 class InternshipController{
-  constructor( $window , InternshipsService , $scope) {
+  constructor( $window , InternshipsService) {
     'ngInject';
     SERVICE.set(this, InternshipsService.resource);
     this.$window = $window;

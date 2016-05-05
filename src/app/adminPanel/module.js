@@ -20,6 +20,7 @@ import { AuthInterceptor } from './components/users/authInterceptor.service'; //
 import { NavbarDirective } from './directives/navbar/navbar.directive';
 import { MenuButtonDirective } from './directives/menuButton/menuButton.directive';
 import { InternshipDirective } from './components/internships/internship.directive'
+import { TeamMemberDirective } from './components/team_members/team_member.directive'
 var adminModule = 'adminPanel';
  angular.module(adminModule , [ 'ngAnimate', 'ngSanitize', 'ngResource', 'ui.router', 'ui.bootstrap', 'toastr', 'ngFileUpload'])
   .constant('api', "http://sgaubg.herokuapp.com/api/")
@@ -45,6 +46,7 @@ var adminModule = 'adminPanel';
   .directive('acmeNavbar', NavbarDirective)
   .directive('menuButton', MenuButtonDirective)
   .directive('internship', InternshipDirective)
+  .directive('teamMember', TeamMemberDirective)
  ;
 
 export default adminModule;
