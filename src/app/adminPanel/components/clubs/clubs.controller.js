@@ -7,69 +7,7 @@ export class ClubsController {
     this.$modal = $modal;
     SERVICE.set(this, ClubsService.resource);
 
-
-
-    this.clubs = [
-      {
-        name: "spaces",
-        id: "1",
-        professorId: "who knows, who cares",
-        president: "mitko the tiger",
-        department: "cos"
-      },
-      {
-        name: "spaces",
-        id: "2",
-        professorId: "who knows, who cares",
-        president: "mitko the tiger",
-        department: "cos"
-      },
-      {
-        name: "spaces",
-        id: "3",
-        professorId: "who knows, who cares",
-        president: "mitko the tiger",
-        department: "cos"
-      },
-      {
-        name: "spaces",
-        id: "4",
-        professorId: "who knows, who cares",
-        president: "mitko the tiger",
-        department: "cos"
-      },
-      {
-        name: "spaces",
-        id: "5",
-        professorId: "who knows, who cares",
-        president: "mitko the tiger",
-        department: "cos"
-      },
-      {
-        name: "spaces",
-        id: "6",
-        professorId: "who knows, who cares",
-        president: "mitko the tiger",
-        department: "cos"
-      },
-      {
-        name: "spaces",
-        id: "7",
-        professorId: "who knows, who cares",
-        president: "mitko the tiger",
-        department: "cos"
-      },
-      {
-        name: "spaces",
-        id: "8",
-        professorId: "who knows, who cares",
-        president: "mitko the tiger",
-        department: "cos"
-      }
-    ];
-
-    //todo:  API request body?
-    //this.getClubs();
+    this.getClubs();
   }
 
 

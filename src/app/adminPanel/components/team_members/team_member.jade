@@ -1,5 +1,5 @@
 .media-left.media-middle(ng-show='!editing')
-  img.media-object.img-thumbnail(src='http://lorempixum.com/100/100/nature/1')
+  img.media-object.img-thumbnail(ng-src='{{tmc.model.photo}}')
 .media-body(ng-show='!editing')
   h3 {{ tmc.model.name}}
   p {{tmc.model.description}}
@@ -7,11 +7,11 @@
 
   // --------------  EDITING MODE ---------------
 .media-left.media-middle(ng-show='editing')
-  img.media-object.img-thumbnail(src='http://lorempixum.com/100/100/nature/1')
+  img.media-object.img-thumbnail(ng-src='{{tmc.model.photo}}')
 .media-body(ng-show='editing')
   p
     label Name:
-    input.form-control(type='text', ng-model='tmc.model.name', placeholder='Name', ng-required='')
+    input.form-control(type='text', ng-value='tmc.model.name', placeholder='Name', ng-required='')
   p
     label Description:
     input.form-control(type='text', ng-model='tmc.model.description', placeholder='Description', ng-required='')

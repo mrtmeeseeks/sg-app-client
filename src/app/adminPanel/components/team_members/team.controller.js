@@ -20,19 +20,10 @@ export class TeamController {
 
 
 
-    this.teamMembersArray = [
-      {
-        name: "Jonathan Kikimena",
-        description: "this guy is a backend developer"
-      },
-      {
-        name: "Rosen Plevneyev",
-        description: "Lorem Ipsum dolor sit amet"
-      }
-    ];
 
 
-    //this.getTeamMembers();
+
+    this.getTeamMembers();
   }
 
 
@@ -41,7 +32,7 @@ export class TeamController {
   getTeamMembers(){
     SERVICE.get(this).query().$promise.then( response => {
       this.teamMembersArray = response;
-      console.log(response.$promise);
+      console.log(response);
 
     }, error => {
       console.log(error);

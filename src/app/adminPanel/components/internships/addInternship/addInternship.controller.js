@@ -1,9 +1,11 @@
+const SERVICE = new WeakMap();
+var internship = {};
+
 export class AddInternshipController {
 
-  constructor($modalInstance) {
+  constructor($modalInstance, InternshipsService) {
     'ngInject';
-
-
+    SERVICE.set(internship, InternshipsService.resource)
     this.$modalInstance = $modalInstance;
 
   }
@@ -11,8 +13,9 @@ export class AddInternshipController {
 
 
 
-  register(user){
-
+  add(){
+    this.newInternship['wrapper'] = 'internship';
+    SERVICE.get(internship).add({}, this.newInternship);
     this.$modalInstance.dismiss();
   }
 

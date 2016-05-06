@@ -1,9 +1,10 @@
 export class TeamMemberService {
 
-  constructor($resource, api) {
+  constructor($resource, api, TransformRequestService) {
     'ngInject';
 
-    this.resource = $resource(api +"v1/team_members/:teamMemberId", { teamMemberId: '@teamMemberId'}, {
+
+    this.resource = $resource(api + "v1/team_members/:teamMemberId", {teamMemberId: '@teamMemberId'}, {
       get: {
         method: 'GET'
       },
@@ -15,14 +16,17 @@ export class TeamMemberService {
         method: 'DELETE'
       },
       add: {
-        method: 'POST'
+        method: 'POST',
+        transformRequest: TransformRequestService.transform,
+        headers: {
+          'Content-Type': undefined
+        }
       },
       update: {
         method: 'PUT'
       }
     });
   }
-
 
 
 }

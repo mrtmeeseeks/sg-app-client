@@ -1,22 +1,28 @@
 .modal-header
   h3.modal-title Add Internship
-form(name='aic.registrationForm', role='form', ng-submit='aic.register(aic.user)', novalidate='')
+form(name='aic.registrationForm', role='form', ng-submit='aic.add()', novalidate='')
   .modal-body
     .form-group.row(ng-class="{ 'has-error' : aic.registrationForm.name.$error.required && aic.registrationForm.name.$dirty }")
       label.col-md-2.control-label(for='name') Name
       .col-md-10
-        input#name.form-control(type='text', ng-model='aic.user.name', name='name', placeholder='name', required='')
+        input#name.form-control(type='text', ng-model='aic.newInternship.name', name='name', placeholder='name', required='')
         span.help-block(ng-show='aic.registrationForm.name.$error.required  && !aic.registrationForm.name.$pristine') Please enter your name!
     .form-group.row(ng-class="{ 'has-error' : aic.registrationForm.description.$error.required && aic.registrationForm.description.$dirty }")
       label.col-md-2.control-label(for='description') Description
       .col-md-10
-        input#description.form-control(type='text', ng-model='aic.user.description', name='description', placeholder='Description', required='')
+        input#description.form-control(type='text', ng-model='aic.newInternship.description', name='description', placeholder='Description', required='')
         span.help-block(ng-show='aic.registrationForm.description.$error.required  && !aic.registrationForm.description.$pristine') Please enter the description!
     .form-group.row(ng-class="{ 'has-error' : aic.registrationForm.link.$error.required && aic.registrationForm.link.$dirty }")
       label.col-md-2.control-label(for='link') Link
       .col-md-10
-        input#link.form-control(type='text', ng-model='aic.user.link', name='link', placeholder='Link', required='')
+        input#link.form-control(type='text', ng-model='aic.newInternship.link', name='link', placeholder='Link', required='')
         span.help-block(ng-show='aic.registrationForm.link.$error.required  && !aic.registrationForm.link.$pristine') Please enter the link!
+    .form-group.row(ng-class="{ 'has-error' : aic.registrationForm.photo.$error.required && aic.registrationForm.photo.$dirty }")
+      label.col-md-2.control-label(for='logo') Logo
+      .col-md-10
+        input#logo(type='file', ngf-select='', ng-model='aic.newInternship.logo', name='logo', accept='image/*', ngf-max-size='2MB', required='', ngf-model-invalid='errorFile')
+        span.help-block(ng-show='aic.registrationForm.logo.$error.required  && !aic.registrationForm.logo.$pristine') Please attach a picture!
+        img.img-thumbnail(ng-show='aic.registrationForm.logo.$valid', ngf-thumbnail='aic.newInternship.logo')
   // --------- END MODAL BODY -------------
   .modal-footer
     button.btn.btn-primary(ng-disabled='aic.registrationForm.$invalid', type='submit') Register

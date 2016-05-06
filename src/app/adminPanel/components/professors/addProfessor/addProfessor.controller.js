@@ -8,7 +8,6 @@ export class AddProfessorController {
     SERVICE.set(this, ProfessorsService.resource);
     this.$modalInstance = $modalInstance;
     this.$rootScope = $rootScope;
-    this.newProfessor = {};
     this.$scope = $scope;
 
 
@@ -16,46 +15,16 @@ export class AddProfessorController {
   }
 
 
-
-
-
-  //---------------- UPLOAD PICTURE ----------------
-  uploadPic(file) {
-
-    if ((file )|| true) {
-      var FR= new FileReader();
-      FR.onload = (e) => {
-        this.newProfessor.image_json = e.target.result;
-      };
-      FR.readAsDataURL( file );
-    }
-    file.progress=100;
-
-
-}
-
-
-
-
-
-
-  addNewProfessor(newProfessor) {
-
-    SERVICE.get(this).add({}, JSON.parse('{"professor":'+JSON.stringify(newProfessor)+'}'));
-
-
-    console.log('new professor posted to api');
-    //this.$rootScope.$broadcast("professorAdded");
-
+  add() {
+    this.newProfessor['wrapper'] = 'professor';
+    SERVICE.get(this).add({}, this.newProfessor);
     this.$modalInstance.dismiss();
-
   }
 
 
 
 
   closeRegistrationForm(){
-    console.log("close modal vella");
     this.$modalInstance.dismiss();
   }
 

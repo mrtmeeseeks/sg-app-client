@@ -16,11 +16,12 @@ import { TeamMemberService } from './components/team_members/teamMember.service.
 import { ProfessorsService } from './components/professors/professors.service';
 import { InternshipsService } from './components/internships/internships.service';
 import { ClubsService } from './components/clubs/clubs.service';
+import { TransformRequestService } from './services/transformRequest.service';
 import { AuthInterceptor } from './components/users/authInterceptor.service'; //intercept http requests and put tokens on them
 import { NavbarDirective } from './directives/navbar/navbar.directive';
 import { MenuButtonDirective } from './directives/menuButton/menuButton.directive';
-import { InternshipDirective } from './components/internships/internship.directive'
-import { TeamMemberDirective } from './components/team_members/team_member.directive'
+import { InternshipDirective } from './components/internships/internship.directive';
+import { TeamMemberDirective } from './components/team_members/team_member.directive';
 var adminModule = 'adminPanel';
  angular.module(adminModule , [ 'ngAnimate', 'ngSanitize', 'ngResource', 'ui.router', 'ui.bootstrap', 'toastr', 'ngFileUpload'])
   .constant('api', "http://sgaubg.herokuapp.com/api/")
@@ -32,6 +33,7 @@ var adminModule = 'adminPanel';
   .service('ClubsService', ClubsService)
   .service('ProfessorsService', ProfessorsService)
   .service('AuthInterceptor', AuthInterceptor)
+  .service('TransformRequestService', TransformRequestService)
   .controller('TeamController', TeamController)
   .controller('ProfessorsController', ProfessorsController)
   .controller('LoginController', LoginController)

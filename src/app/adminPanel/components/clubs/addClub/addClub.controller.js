@@ -14,7 +14,10 @@ export class AddClubController {
 
 
 
-  register(user){
+  add(){
+
+    this.newClub['wrapper'] = 'club';
+    SERVICE.get(this).add({}, this.newClub);
     this.$modalInstance.dismiss();
 
   }

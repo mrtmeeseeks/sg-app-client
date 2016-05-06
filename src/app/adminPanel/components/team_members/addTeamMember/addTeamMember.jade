@@ -1,17 +1,29 @@
 .modal-header
   h3.modal-title Add Team Member
-form(name='atm.registrationForm', role='form', ng-submit='atm.register(atm.user)', novalidate='')
+form(name='atm.registrationForm', role='form', ng-submit='atm.add()', novalidate='')
   .modal-body
     .form-group.row(ng-class="{ 'has-error' : atm.registrationForm.name.$error.required && atm.registrationForm.name.$dirty }")
       label.col-md-2.control-label(for='name') Name
       .col-md-10
-        input#name.form-control(type='text', ng-model='atm.user.name', name='name', placeholder='name', required='')
+        input#name.form-control(type='text', ng-model='atm.member.name', name='name', placeholder='name', required='')
         span.help-block(ng-show='atm.registrationForm.name.$error.required  && !atm.registrationForm.name.$pristine') Please enter your name!
     .form-group.row(ng-class="{ 'has-error' : atm.registrationForm.description.$error.required && atm.registrationForm.description.$dirty }")
       label.col-md-2.control-label(for='description') Description
       .col-md-10
-        input#description.form-control(type='text', ng-model='atm.user.description', name='description', placeholder='Description', required='')
+        input#description.form-control(type='text', ng-model='atm.member.description', name='description', placeholder='Description', required='')
         span.help-block(ng-show='atm.registrationForm.description.$error.required  && !atm.registrationForm.description.$pristine') Please enter the description!
+    .form-group.row(ng-class="{ 'has-error' : atm.registrationForm.description.$error.required && atm.registrationForm.description.$dirty }")
+        label.col-md-2.control-label(for='title') Title
+        .col-md-10
+          input#title.form-control(type='text', ng-model='atm.member.title', name='title', placeholder='Title', required='')
+          span.help-block(ng-show='atm.registrationForm.title.$error.required  && !atm.registrationForm.title.$pristine') Please enter the title!
+    .form-group.row(ng-class="{ 'has-error' : atm.registrationForm.photo.$error.required && atm.registrationForm.photo.$dirty }")
+        label.col-md-2.control-label(for='photo') Photo
+        .col-md-10
+          input#photo(type='file', ngf-select='', ng-model='atm.member.photo', name='photo', accept='image/*', ngf-max-size='2MB', required='', ngf-model-invalid='errorFile')
+          span.help-block(ng-show='atm.registrationForm.photo.$error.required  && !atm.registrationForm.photo.$pristine') Please attach a picture!
+          img.img-thumbnail(ng-show='atm.registrationForm.photo.$valid', ngf-thumbnail='atm.member.photo')
+
   // -------   END MODAL BODY  ---------
   .modal-footer
     button.btn.btn-primary(ng-disabled='atm.registrationForm.$invalid', type='submit') Register

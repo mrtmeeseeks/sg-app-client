@@ -1,6 +1,6 @@
 export class ClubsService {
 
-  constructor($resource, api){
+  constructor($resource, api, TransformRequestService){
     'ngInject';
 
     this.resource = $resource( api + 'v1/clubs/:clubsId', {clubsId: '@clubsId'},
@@ -16,7 +16,12 @@ export class ClubsService {
           method: 'DELETE'
         },
         add: {
-          method: 'POST'
+          method: 'POST',
+          transformRequest: TransformRequestService.transform,
+          headers: {
+            'Content-Type': undefined
+          }
+
         },
         update: {
           method: 'PUT'

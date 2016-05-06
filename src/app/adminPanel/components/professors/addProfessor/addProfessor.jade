@@ -1,6 +1,6 @@
 .modal-header
   h3.modal-title Add Professor
-form(name='apr.registrationForm', role='form', ng-submit='apr.addNewProfessor(apr.newProfessor, apr.picFile)', novalidate='')
+form(name='apr.registrationForm', role='form', ng-submit='apr.add()', novalidate='')
   .modal-body
     .form-group.row(ng-class="{ 'has-error' : apr.registrationForm.name.$error.required && apr.registrationForm.name.$dirty }")
       label.col-md-2.control-label(for='name') Name
@@ -23,25 +23,19 @@ form(name='apr.registrationForm', role='form', ng-submit='apr.addNewProfessor(ap
     // ng-class="{ 'has-error' : apr.registrationForm.description.$error.required && apr.registrationForm.description.$dirty }">
     // <label class="col-md-2 control-label" for="description">Description</label>
     // <div class="col-md-10">
-    // <input type="text" ng-model="atm.newProfessor.description" class="form-control" id="description"
+    // <input type="text" ng-model="apr.newProfessor.description" class="form-control" id="description"
     // name="description" placeholder="Description" required>
     // <span ng-show="apr.registrationForm.description.$error.required  && !apr.registrationForm.description.$pristine"
     // class="help-block">Please enter the description!</span>
     // </div>
     // </div>
-    .form-group.row
-      label.col-md-2.control-label(for='department') Photo:
+    .form-group.row(ng-class="{ 'has-error' : apr.registrationForm.title.$error.required && apr.registrationForm.title.$dirty }")
+      label.col-md-2.control-label(for='photo') Photo
       .col-md-10
-        input#inp(type='file', ngf-select='', ng-model='apr.picFile', name='file', accept='image/*', ngf-max-size='2MB', required='', ngf-model-invalid='errorFile')
-        i(ng-show='apr.registrationForm.file.$error.required') *required
-        br
-        img.img-thumbnail(ng-show='apr.registrationForm.file.$valid', ngf-thumbnail='apr.picFile')
-        a.btn.btn-danger(ng-click='apr.picFile = null', ng-show='apr.picFile') Remove
-        br
-        a.btn.btn-default(ng-show='apr.picFile', ng-click='apr.uploadPic(apr.picFile); registerInvalid=true') Upload
-        span.progress(ng-show='apr.picFile.progress >= 0')
-          div(ng-bind="'Uploaded Succesfully'")
+        input#photo(type='file', ngf-select='', ng-model='apr.newProfessor.photo', name='photo', accept='image/*', ngf-max-size='2MB', required='', ngf-model-invalid='errorFile')
+        span.help-block(ng-show='apr.registrationForm.photo.$error.required  && !apr.registrationForm.photo.$pristine') Please attach a picture!
+        img.img-thumbnail(ng-show='apr.registrationForm.photo.$valid', ngf-thumbnail='apr.newProfessor.photo')
   // END  MODAL BODY
   .modal-footer
-    button.btn.btn-primary(ng-disabled='apr.registrationForm.$invalid || !registerInvalid', type='submit') Register
+    button.btn.btn-primary(ng-disabled='apr.registrationForm.$invalid', type='submit') Register
     button.btn.btn-warning(type='button', ng-click='apr.closeRegistrationForm()') Cancel

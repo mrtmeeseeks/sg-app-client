@@ -1,6 +1,6 @@
 
 .media-left.media-middle(ng-show='!editing')
-  img.media-object.img-thumbnail(src='http://lorempixum.com/100/100/nature/1')
+  img.media-object.img-thumbnail(ng-src='{{int.model.logo}}')
 .media-body(ng-show='!editing')
   h3 {{ int.model.name}}
   p {{int.model.description}}

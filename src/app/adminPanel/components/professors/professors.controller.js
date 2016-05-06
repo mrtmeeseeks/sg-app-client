@@ -80,7 +80,7 @@ export class ProfessorsController {
   getProfessors(){
     SERVICE.get(edor).query().$promise.then( result => {
       this.professorsArray = result;
-      console.log(this);
+      //console.log(result);
     });
   }
 
