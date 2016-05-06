@@ -3,7 +3,6 @@
 .media-body(ng-show='!editing')
   h3 {{ tmc.model.name}}
   p {{tmc.model.description}}
-  p link: {{ tmc.model.link}}
   button.btn.btn-primary.pull-right(ng-hide='editing', ng-click='editing = true') Edit
 
   // --------------  EDITING MODE ---------------
@@ -16,9 +15,6 @@
   p
     label Description:
     input.form-control(type='text', ng-model='tmc.model.description', placeholder='Description', ng-required='')
-  p
-    label Link:
-    input.form-control(type='text', ng-model='tmc.model.link', placeholder='Link', ng-required='')
   br
   //todo: save implementation and cancel implementation
   button.btn.btn-success(type='submit' ng-click='editing = false' ) Save
