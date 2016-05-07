@@ -17,14 +17,9 @@
         // ----------------- TEAM LIST ------------------
         .team
           ul
-            li.media(ng-repeat='member in team.teamMembersArray | filter:team.searchBox')
+            li.media(ng-repeat='member in team.paginationRange | filter:team.searchBox')
               team-member(model="member")
         // team list finish
         // ---------------- PAGINATION ----------------
-        // <pagination
-        // ng-model="team.currentPage"
-        // total-items="(team.teamMembers | filter:team.searchBox).length"
-        // max-size="team.maxSize"
-        // boundary-links="true"
-        // ng-change="team.pageChanged()">
-        // </pagination>
+        pagination(ng-model='team.currentPage', total-items='(team.teamMembers | filter:team.searchBox).length', max-size='team.maxSize', boundary-links='true', ng-change='team.pageChanged()')
+

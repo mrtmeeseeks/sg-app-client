@@ -7,6 +7,12 @@ export class ClubsController {
     this.$modal = $modal;
     SERVICE.set(this, ClubsService.resource);
 
+    //--------- PAGINATION PROPERTIES ----------
+    this.paginationRange = [];
+    this.currentPage = 1;
+    this.numPerPage = 10;
+    this.maxSize = 5;
+
     this.getClubs();
   }
 
@@ -16,6 +22,7 @@ export class ClubsController {
   getClubs() {
     SERVICE.get(this).query().$promise.then((response) => {
         this.clubs= response;
+        this.pageChanged();
       },
       (error) => {
         console.log(error);
@@ -38,6 +45,12 @@ export class ClubsController {
   }
 
 
+
+  //------------ PAGINATION ------------
+  pageChanged() {
+    var begin = ((this.currentPage - 1) * this.numPerPage), end = begin + this.numPerPage;
+    this.paginationRange = this.clubs.slice(begin, end);
+  }
 
 
 }
