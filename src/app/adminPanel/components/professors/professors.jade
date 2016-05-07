@@ -25,9 +25,10 @@
               li(role='presentation', ng-class='{active:isSelected(4)}')
                 a(ng-click='prof.select(4)', aria-controls='desserts', role='tab') MAT
             // ------------- PROFESSORS LIST --------------
+            br
             .team
               ul
-                li.media(ng-repeat='professor in prof.professorsArray | filter: prof.filtText |filter:prof.searchBox')
+                li.media(ng-repeat='professor in prof.paginationRange | filter: prof.filtText | filter:prof.searchBox')
                   .media-left.media-middle
                     img.media-object.img-thumbnail(ng-src='{{ professor.photo }}')
                   .media-body
@@ -36,11 +37,6 @@
                     // <p>{{ professor.description }}</p> todo: add professor description in the api
                     button.btn.btn-primary.pull-right(type='button', ui-sref='adminPanel.professorDetails({professorId: professor.id})') View Details
             // professors list finish
-          // pagination
-          // <pagination
-          // ng-model="prof.currentPage"
-          // total-items="(prof.professorsArray | filter: prof.filtText |filter:prof.searchBox).length"
-          // max-size="prof.maxSize"
-          // boundary-links="true"
-          // ng-change="prof.pageChanged()">
-          // </pagination>
+
+          // ---------------- PAGINATION ----------------
+          pagination(ng-model='prof.currentPage', total-items='(prof.professorsArray | filter: prof.filtText | filter:prof.searchBox).length', max-size='prof.maxSize', boundary-links='true', ng-change='prof.pageChanged()')

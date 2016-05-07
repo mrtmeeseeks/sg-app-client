@@ -20,21 +20,16 @@ export class ProfessorsController {
     this.getProfessors();
 
 
-    //----------- PAGINATION properties --------------
-    //this.filteredTodos = [];
-    //this.currentPage = 1;
-    //this.numPerPage = 10;
-    //this.maxSize = 5;
-    //this.$scope.$watch('currentPage', this.pageChanged());
+    //--------- PAGINATION PROPERTIES ----------
+    this.paginationRange = [];
+    this.currentPage = 1;
+    this.numPerPage = 10;
+    this.maxSize = 5;
 
   }
 
 
-  //------------ PAGINATION ------------
-  //pageChanged() {
-  //  var begin = ((this.currentPage - 1) * this.numPerPage), end = begin + this.numPerPage;
-  //  this.filteredTodos = this.professorsArray.slice(begin, end);
-  //}
+
 
 
 
@@ -80,8 +75,16 @@ export class ProfessorsController {
   getProfessors(){
     SERVICE.get(edor).query().$promise.then( result => {
       this.professorsArray = result;
-      //console.log(result);
+      this.pageChanged();
     });
+  }
+
+
+
+  //------------ PAGINATION ------------
+  pageChanged() {
+    var begin = ((this.currentPage - 1) * this.numPerPage), end = begin + this.numPerPage;
+    this.paginationRange = this.professorsArray.slice(begin, end);
   }
 
 }

@@ -10,17 +10,12 @@ export class TeamController {
     this.$modal = $modal;
     this.$scope =$scope;
 
+
     //--------- PAGINATION PROPERTIES ----------
-    //this.filteredTodos = [];
-    //this.currentPage = 1;
-    //this.numPerPage = 10;
-    //this.maxSize = 5;
-    //this.$scope.$watch('currentPage', this.pageChanged());
-
-
-
-
-
+    this.paginationRange = [];
+    this.currentPage = 1;
+    this.numPerPage = 10;
+    this.maxSize = 5;
 
 
     this.getTeamMembers();
@@ -31,8 +26,9 @@ export class TeamController {
 
   getTeamMembers(){
     SERVICE.get(this).query().$promise.then( response => {
-      this.teamMembersArray = response;
+      this.teamMembers = response;
       console.log(response);
+      this.pageChanged();
 
     }, error => {
       console.log(error);
@@ -66,12 +62,9 @@ export class TeamController {
 
 
 
-
-
-
   //---------------- PAGINATION -----------------
-  //pageChanged() {
-  //  var begin = ((this.currentPage - 1) * this.numPerPage), end = begin + this.numPerPage;
-  //  this.filteredTodos = this.teamMembersArray.slice(begin, end);
-  //}
+  pageChanged() {
+    var begin = ((this.currentPage - 1) * this.numPerPage), end = begin + this.numPerPage;
+    this.paginationRange = this.teamMembers.slice(begin, end);
+  }
 }

@@ -17,6 +17,9 @@
         // ------------ INTERNSHIPS LIST  ----------
         .team
           ul
-            li.media(ng-repeat='internship in internCtrl.internshipsArray')
+            li.media(ng-repeat='internship in internCtrl.paginationRange')
               internship(model="internship")
+
+        // ---------------- PAGINATION ----------------
+        pagination(ng-model='internCtrl.currentPage', total-items='(internCtrl.internshipsArray | filter:internCtrl.searchBox).length', max-size='internCtrl.maxSize', boundary-links='true', ng-change='internCtrl.pageChanged()')
 
