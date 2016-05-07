@@ -20,11 +20,11 @@ export function InternshipDirective() {
 }
 
 class InternshipController{
-  constructor( $window , InternshipsService) {
+  constructor( $window , InternshipsService, $rootScope) {
     'ngInject';
     SERVICE.set(this, InternshipsService.resource);
     this.$window = $window;
-
+    this.$rootScope = $rootScope;
 
   }
 
@@ -32,6 +32,7 @@ class InternshipController{
   delete() {
     if (this.$window.confirm('You sure you want to delete this internship?')) {
       SERVICE.get(this).delete({internshipId: this.model.id}).$promise.then(() => {
+        this.$rootScope.$broadcast("internshipDeleted");
         },
         (error) => {
           console.log(error.statusText);

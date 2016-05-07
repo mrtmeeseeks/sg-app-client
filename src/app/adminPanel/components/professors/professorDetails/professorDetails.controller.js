@@ -2,19 +2,18 @@ const SERVICE = new WeakMap();
 
 export class ProfessorDetailsController {
 
-  constructor($modal, $scope, $stateParams, ProfessorsService, $state) {
+  constructor($modal, $scope, $stateParams, ProfessorsService, $state, $window) {
     'ngInject';
 
     this.$scope = $scope;
     this.$stateParams = $stateParams;
     this.$modal = $modal;
     this.$state = $state;
+    this.$window = $window;
     SERVICE.set(this, ProfessorsService.resource);
 
     this.getProfessor(this.$stateParams.professorId);
   }
-
-
 
 
   getProfessor(professorId) {
@@ -29,8 +28,6 @@ export class ProfessorDetailsController {
   }
 
 
-
-
   saveProfessorEditing(professorId) {
     console.log('------------');
     delete this.professorDetails.photo;
@@ -41,37 +38,31 @@ export class ProfessorDetailsController {
   }
 
 
-
-
-  deleteProfessor(professorId) {
-    SERVICE.get(this).delete({professorId: professorId}).$promise.then((result)=> {
-      this.$state.go('adminPanel.professors');
-      console.log('finally deleted');
-    }, (error)=> {
-      console.log(error);
-    });
+  deleteProfessor() {
+    if (this.$window.confirm('You sure you want to delete this Professor?')) {
+      SERVICE.get(this).delete({professorId: this.professorDetails.id}).$promise.then(()=> {
+        this.$state.go('adminPanel.professors');
+      }, (error)=> {
+        console.log(error);
+      });
+    }
   }
-
-
-
 
 
   //---------------- UPLOAD FILE ----------------
   uploadPic(file) {
 
-    if ((file )|| true) {
-      var FR= new FileReader();
+    if ((file ) || true) {
+      var FR = new FileReader();
       FR.onload = (e) => {
         this.professorDetails.image_json = e.target.result;
       };
-      FR.readAsDataURL( file );
+      FR.readAsDataURL(file);
     }
-    file.progress=100;
+    file.progress = 100;
 
 
   }
-
-
 
 
 //----------------  BASE 64 CONVERTER ------------------

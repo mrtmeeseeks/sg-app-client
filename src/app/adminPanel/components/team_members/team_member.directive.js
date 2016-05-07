@@ -20,18 +20,19 @@ export function TeamMemberDirective() {
 }
 
 class TeamMemberController{
-  constructor( $window , TeamMemberService) {
+  constructor( $window , TeamMemberService, $rootScope) {
     'ngInject';
     SERVICE.set(this, TeamMemberService.resource);
     this.$window = $window;
-
+    this.$rootScope = $rootScope;
 
   }
 
 
-  delete() {
+  deleteMember() {
     if (this.$window.confirm('You sure you want to delete this Team Member?')) {
       SERVICE.get(this).delete({teamMemberId: this.model.id}).$promise.then(() => {
+          this.$rootScope.$broadcast("memberDeleted");
         },
         (error) => {
           console.log(error.statusText);
