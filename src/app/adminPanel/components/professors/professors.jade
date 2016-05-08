@@ -17,13 +17,25 @@
           ul.media-list(tab-pane='', fade='', in='', active='')
             ul.nav.nav-tabs(role='tablist')
               li(role='presentation', ng-class='{active:isSelected(1)}')
-                a(ng-click='prof.select(1)', aria-controls='all menu', role='tab') All departments
+                a(ng-click='prof.select(1)', aria-controls='all departments', role='tab') All departments
               li(role='presentation', ng-class='{active:isSelected(2)}')
-                a(ng-click='prof.select(2)', aria-controls='appetizers', role='tab') COS
+                a(ng-click='prof.select(2)', aria-controls='business', role='tab') BUS
               li(role='presentation', ng-class='{active:isSelected(3)}')
-                a(ng-click='prof.select(3)', aria-controls='mains', role='tab') ECO
+                a(ng-click='prof.select(3)', aria-controls='computer science', role='tab') COS
               li(role='presentation', ng-class='{active:isSelected(4)}')
-                a(ng-click='prof.select(4)', aria-controls='desserts', role='tab') MAT
+                a(ng-click='prof.select(4)', aria-controls='economics', role='tab') ECO
+              li(role='presentation', ng-class='{active:isSelected(5)}')
+                a(ng-click='prof.select(5)', aria-controls='literature', role='tab') ENG
+              li(role='presentation', ng-class='{active:isSelected(6)}')
+                a(ng-click='prof.select(6)', aria-controls='history', role='tab') HTY
+              li(role='presentation', ng-class='{active:isSelected(7)}')
+                a(ng-click='prof.select(7)', aria-controls='information systems', role='tab') INF
+              li(role='presentation', ng-class='{active:isSelected(8)}')
+                a(ng-click='prof.select(8)', aria-controls='journalism', role='tab') JMC
+              li(role='presentation', ng-class='{active:isSelected(9)}')
+                a(ng-click='prof.select(9)', aria-controls='mathematics', role='tab') MAT
+              li(role='presentation', ng-class='{active:isSelected(10)}')
+                a(ng-click='prof.select(10)', aria-controls='political science', role='tab') POS
             // ------------- PROFESSORS LIST --------------
             br
             .team

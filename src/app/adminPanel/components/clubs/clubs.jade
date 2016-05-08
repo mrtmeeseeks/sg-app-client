@@ -22,7 +22,7 @@
                 img.media-object.img-thumbnail(ng-src='http://aubgdaily.com/wp-content/uploads/2016/02/12002169_936447813082218_514544124821127265_n.jpg')
               .media-body
                 h3.media-heading {{ club.name}}
-                button.btn.btn-primary.pull-right(type='button', ui-sref='adminPanel.clubDetails({professorId: professor.id})') View Details
+                button.btn.btn-primary.pull-right(type='button', ui-sref='adminPanel.clubDetails({clubId: club.id})') View Details
 
         // ---------------- PAGINATION ----------------
         pagination(ng-model='clubsCtrl.currentPage', total-items='(clubsCtrl.clubs | filter:clubsCtrl.searchBox).length', max-size='clubsCtrl.maxSize', boundary-links='true', ng-change='clubsCtrl.pageChanged()')

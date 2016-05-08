@@ -39,13 +39,31 @@ export class ProfessorsController {
   select(setTab){
     this.tab = setTab;
     if (setTab === 2) {
-      this.filtText = "cos";
+      this.filtText = "bus";
     }
     else if (setTab === 3) {
-      this.filtText = "eco";
+      this.filtText = "cos";
     }
     else if (setTab === 4) {
+      this.filtText = "eco";
+    }
+    else if (setTab === 5) {
+      this.filtText = "eng";
+    }
+    else if (setTab === 6) {
+      this.filtText = "hty";
+    }
+    else if (setTab === 7) {
+      this.filtText = "inf";
+    }
+    else if (setTab === 8) {
+      this.filtText = "jmc";
+    }
+    else if (setTab === 9) {
       this.filtText = "mat";
+    }
+    else if (setTab === 10) {
+      this.filtText = "pos";
     }
     else {
       this.filtText = "";

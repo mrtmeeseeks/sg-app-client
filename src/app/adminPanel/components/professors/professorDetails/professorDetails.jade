@@ -32,13 +32,15 @@
                 p
                   label Department:
                     select#department.form-control(ng-model='profDetail.professorDetails.department', required='')
-                      option cos
-                      option inf
-                      option mat
-                      option jmc
-                      option pos
-                      option eco
                       option bus
+                      option cos
+                      option eco
+                      option eng
+                      option hty
+                      option inf
+                      option jmc
+                      option mat
+                      option pos
                 br
 
                 button.btn.btn-success(type='submit' ng-click='editing = false; profDetail.save()' ) Save

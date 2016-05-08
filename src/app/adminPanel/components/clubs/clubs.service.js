@@ -3,7 +3,7 @@ export class ClubsService {
   constructor($resource, api, TransformRequestService){
     'ngInject';
 
-    this.resource = $resource( api + 'v1/clubs/:clubsId', {clubsId: '@clubsId'},
+    this.resource = $resource( api + 'v1/clubs/:clubId', {clubId: '@clubId'},
       {
         get: {
           method: 'GET'

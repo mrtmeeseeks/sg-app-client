@@ -6,13 +6,12 @@ export class ProfessorDetailsController {
     'ngInject';
 
     this.$scope = $scope;
-    this.$stateParams = $stateParams;
     this.$modal = $modal;
     this.$state = $state;
     this.$window = $window;
     SERVICE.set(this, ProfessorsService.resource);
 
-    this.getProfessor(this.$stateParams.professorId);
+    this.getProfessor($stateParams.professorId);
   }
 
 

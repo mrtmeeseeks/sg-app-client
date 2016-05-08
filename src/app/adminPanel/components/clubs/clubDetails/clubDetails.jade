@@ -5,27 +5,37 @@
     #page-content-wrapper
       .container-fluid
         button.btn.btn-default(ng-show='!editing', ui-sref='adminPanel.clubs')  back to clubs
+
+
         // -------------   CLUB BODY   --------------
-        form(ng-show='!editing', ng-submit='editing = true')
-          .row
-            .col-md-4
-              img(src='http://nxworld.net/codepen/css-image-hover-effects/pic03.jpg', alt='')
-            .col-md-6
-              h1  {{ clubDetail.club.name }} something
-              p  President: {{ clubDetail.club.president }} the rosen plevneyev
-              p  Professor: {{ clubDetail.club.professor }} advisor of the club
-          button.btn.btn-primary.pull-right(type='submit') Edit
-        // ------------   EDITING MODE   -------------
-        form(ng-show='editing', ng-submit='editing = false')
-          label Name of the club:
-          input(type='text', ng-model='clubDetail.club.name', placeholder='Name', ng-required='')
-          label President of the club:
-          input(type='text', ng-model='clubDetail.club.president', placeholder='President', ng-required='')
-          label Professor:
-          input(type='text', ng-model='clubDetail.club.professor', placeholder='Professor', ng-required='')
-          label Description of the club:
-          input(type='text', ng-model='', placeholder='Description', ng-required='')
-          br
-          button.btn.btn-success(type='submit') Save
-          button.btn.btn-danger(type='button', ng-click='clubDetail.deleteClub()')
-            | Delete
+
+        .team
+          ul
+            li.media
+              .media-left.media-middle(ng-show='!editing')
+                img.media-object.img-thumbnail(ngf-thumbnail='clubDetail.club.logo')
+              .media-body(ng-show='!editing')
+                h3.media-heading {{ clubDetail.club.name }} something
+                p  President: {{ clubDetail.club.president }} the rosen plevneyev
+                p  Professor: {{ clubDetail.club.professor }} advisor of the club
+                button.btn.btn-primary.pull-right(type='button', ng-click='editing = true; show=true') Edit
+
+                // --------------  EDITING MODE ---------------
+              .media-left.media-middle(ng-show='editing')
+                img.media-object.img-thumbnail(ngf-thumbnail='clubDetail.club.logo')
+                input#logo(type='file', ngf-select='', ng-model='clubDetail.club.logo', name='logo', accept='image/*', ngf-max-size='2MB', required='', ngf-model-invalid='errorFile')
+              .media-body(ng-show='editing')
+                p
+                  label Name:
+                  input.form-control(type='text', ng-model='clubDetail.club.name', placeholder='Name', ng-required='')
+                p
+                  label President:
+                  input.form-control(type='text', ng-model='clubDetail.club.president', placeholder='President', ng-required='')
+                p
+                  label President:
+                  //select.form-control(ng-model='clubDetail.', required='')
+                br
+
+                button.btn.btn-success(type='submit' ng-click='editing = false; clubDetail.save()' ) Save
+                button.btn.btn-info(type='submit' ng-click='editing = false; clubDetail.cancel()') Cancel
+                button.btn.btn-danger.pull-right(type='button', ng-click='clubDetail.delete()') Delete
