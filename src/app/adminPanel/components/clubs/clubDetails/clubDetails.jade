@@ -15,10 +15,10 @@
               .media-left.media-middle(ng-show='!editing')
                 img.media-object.img-thumbnail(ngf-thumbnail='clubDetail.club.logo')
               .media-body(ng-show='!editing')
-                h3.media-heading {{ clubDetail.club.name }} something
+                h3.media-heading {{ clubDetail.club.name }}
                 p  President: {{ clubDetail.club.president }} the rosen plevneyev
-                p  Professor: {{ clubDetail.club.professor }} advisor of the club
-                button.btn.btn-primary.pull-right(type='button', ng-click='editing = true; show=true') Edit
+                p  Professor: {{ clubDetail.club.professor.name }} advisor of the club
+                button.btn.btn-primary.pull-right(type='button', ng-click='editing = true; show=true; clubDetails.getProfessors()') Edit
 
                 // --------------  EDITING MODE ---------------
               .media-left.media-middle(ng-show='editing')
@@ -32,8 +32,8 @@
                   label President:
                   input.form-control(type='text', ng-model='clubDetail.club.president', placeholder='President', ng-required='')
                 p
-                  label President:
-                  //select.form-control(ng-model='clubDetail.', required='')
+                  label Professor:
+                  select#professor_id.form-control(type='text', ng-model='clubDetail.club.professor_id', ng-options='professor.id as professor.name for professor in clubDetail.professorsArray', name='professor_id', placeholder='Professor', required='')
                 br
 
                 button.btn.btn-success(type='submit' ng-click='editing = false; clubDetail.save()' ) Save

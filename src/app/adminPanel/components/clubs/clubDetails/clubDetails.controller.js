@@ -13,6 +13,7 @@ export class ClubDetailsController {
   }
 
 
+
   getClub(clubId) {
     SERVICE.get(this).get({clubId: clubId}).$promise.then((response)=> {
       this.club = response;
@@ -21,6 +22,15 @@ export class ClubDetailsController {
       console.log(error);
     });
   }
+
+  getProfessors() {
+    SERVICE.get(professors).query().$promise.then(response=> {
+      this.professorsArray = response;
+      console.log(response);
+    }, ()=> {
+    });
+  }
+
 
   save() {
     this.club['wrapper'] = 'club';
@@ -36,7 +46,7 @@ export class ClubDetailsController {
 
 
   delete() {
-    if (this.$window.confirm('You sure you want to delete this Professor?')) {
+    if (this.$window.confirm('You sure you want to delete this Club?')) {
       SERVICE.get(this).delete({clubId: this.club.id}).$promise.then(()=> {
         this.$state.go('adminPanel.clubs');
       }, (error)=> {

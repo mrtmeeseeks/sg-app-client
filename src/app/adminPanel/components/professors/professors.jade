@@ -42,7 +42,7 @@
               ul
                 li.media(ng-repeat='professor in prof.paginationRange | filter: prof.filtText | filter:prof.searchBox')
                   .media-left.media-middle
-                    img.media-object.img-thumbnail(ng-src='{{ professor.photo }}')
+                    img.media-object.img-thumbnail(ngf-thumbnail='professor.photo')
                   .media-body
                     h3.media-heading {{ professor.name}}
                     p.label.label-danger {{ professor.department }}

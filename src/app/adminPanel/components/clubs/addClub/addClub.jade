@@ -12,17 +12,17 @@ form(name='acc.registrationForm', role='form', ng-submit='acc.add()', novalidate
       .col-md-10
         input#president.form-control(type='text', ng-model='acc.newClub.president', name='president', placeholder='President of the Club', required='')
         span.help-block(ng-show='acc.registrationForm.president.$error.required  && !acc.registrationForm.president.$pristine') Please enter the president's name!
-    .form-group.row(ng-class="{ 'has-error' : acc.registrationForm.professorId.$error.required && acc.registrationForm.professorId.$dirty }")
-      label.col-md-2.control-label(for='professorId') Professor ID
+    .form-group.row(ng-class="{ 'has-error' : acc.registrationForm.professor_id.$error.required && acc.registrationForm.professor_id.$dirty }")
+      label.col-md-2.control-label(for='professor_id') Professor
       .col-md-10
-        input#professorId.form-control(type='text', ng-model='acc.newClub.professorId', name='professorId', placeholder='Professor ID', required='')
-        span.help-block(ng-show='acc.registrationForm.professorId.$error.required  && !acc.registrationForm.professorId.$pristine') Please enter the professor's ID!
+        select#professor_id.form-control(type='text', ng-model='acc.newClub.professor_id', ng-options='professor.id as professor.name for professor in acc.professorsArray', name='professor_id', placeholder='Professor ID', required='')
+        span.help-block(ng-show='acc.registrationForm.professor_id.$error.required  && !acc.registrationForm.professor_id.$pristine') Please enter the professor's ID!
     .form-group.row(ng-class="{ 'has-error' : acc.registrationForm.title.$error.required && acc.registrationForm.title.$dirty }")
-      label.col-md-2.control-label(for='photo') Photo
+      label.col-md-2.control-label(for='logo') Logo
       .col-md-10
-        input#photo(type='file', ngf-select='', ng-model='acc.newClub.photo', name='photo', accept='image/*', ngf-max-size='2MB', required='', ngf-model-invalid='errorFile')
-        span.help-block(ng-show='acc.registrationForm.photo.$error.required  && !acc.registrationForm.photo.$pristine') Please attach a picture!
-        img.img-thumbnail(ng-show='acc.registrationForm.photo.$valid', ngf-thumbnail='acc.newClub.photo')
+        input#logo(type='file', ngf-select='', ng-model='acc.newClub.logo', name='logo', accept='image/*', ngf-max-size='2MB', required='', ngf-model-invalid='errorFile')
+        span.help-block(ng-show='acc.registrationForm.logo.$error.required  && !acc.registrationForm.logo.$pristine') Please attach a picture!
+        img.img-thumbnail(ng-show='acc.registrationForm.logo.$valid', ngf-thumbnail='acc.newClub.logo')
   // ---------- END MODAL BODY ------------
   .modal-footer
     button.btn.btn-primary(ng-disabled='acc.registrationForm.$invalid', type='submit') Register
