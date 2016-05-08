@@ -18,6 +18,8 @@ export class TeamController {
     this.maxSize = 5;
 
     $scope.$on("memberDeleted", () => {this.getTeamMembers();});
+    $scope.$on("cancelEditing", () => {this.getTeamMembers();});
+
     this.getTeamMembers();
   }
 

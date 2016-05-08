@@ -18,6 +18,9 @@ export class InternshipsController {
     $scope.$on("internshipDeleted", () => {
       this.getInternships();
     });
+    $scope.$on("cancelInternshipEditing", () => {
+      this.getInternships();
+    });
     this.getInternships();
   }
 

@@ -19,8 +19,8 @@ export function TeamMemberDirective() {
   return directive;
 }
 
-class TeamMemberController{
-  constructor( $window , TeamMemberService, $rootScope) {
+class TeamMemberController {
+  constructor($window, TeamMemberService, $rootScope) {
     'ngInject';
     SERVICE.set(this, TeamMemberService.resource);
     this.$window = $window;
@@ -40,6 +40,18 @@ class TeamMemberController{
     }
   }
 
+  cancelEditing(){ //todo: discuss if there is a better way to do the Cancel
+    this.$rootScope.$broadcast('cancelEditing');
+  }
+
+  saveEditing() {
+    this.model['wrapper'] = 'team_member';
+    SERVICE.get(this).update({teamMemberId: this.model.id}, this.model).$promise.then((response) => {
+      console.log(response);
+    }, (error) => {
+      console.log(error.statusText);
+    })
+  }
 
 
 }

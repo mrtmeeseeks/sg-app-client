@@ -41,5 +41,20 @@ class InternshipController{
   }
 
 
+  cancel(){ //todo: discuss if there is a better way to do the Cancel
+    this.$rootScope.$broadcast('cancelInternshipEditing');
+  }
+
+  save() {
+    this.model['wrapper'] = 'internship';
+    SERVICE.get(this).update({internshipId: this.model.id}, this.model).$promise.then((response) => {
+      console.log(response);
+    }, (error) => {
+      console.log(error.statusText);
+    })
+  }
+
+
+
 
 }
