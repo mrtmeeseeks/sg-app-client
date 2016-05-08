@@ -23,7 +23,11 @@ export class TeamMemberService {
         }
       },
       update: {
-        method: 'PUT'
+        method: 'PUT',
+        transformRequest: TransformRequestService.transform,
+        headers: {
+          'Content-Type': undefined
+        }
       }
     });
   }

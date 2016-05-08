@@ -2,7 +2,7 @@ const SERVICE = new WeakMap();
 
 export class InternshipsController {
 
-  constructor($window, $modal, InternshipsService) {
+  constructor($window, $modal, InternshipsService, $scope) {
     'ngInject';
     this.$modal = $modal;
     this.$window = $window;
@@ -14,20 +14,26 @@ export class InternshipsController {
     this.numPerPage = 10;
     this.maxSize = 5;
 
+
+    $scope.$on("internshipDeleted", () => {
+      this.getInternships();
+    });
+    $scope.$on("cancelInternshipEditing", () => {
+      this.getInternships();
+    });
     this.getInternships();
   }
 
 
   getInternships() {
     SERVICE.get(this).query().$promise.then(response => {
-      this.internshipsArray = response;
-      this.pageChanged();
+        this.internshipsArray = response;
+        this.pageChanged();
       },
       error => {
         console.log(error);
       });
   }
-
 
 
   addInternship() {
@@ -39,8 +45,6 @@ export class InternshipsController {
       size: 'md'
     });
   }
-
-
 
 
   //------------ PAGINATION ------------

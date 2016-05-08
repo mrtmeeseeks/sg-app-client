@@ -8,7 +8,7 @@ export class TeamController {
     SERVICE.set(this, TeamMemberService.resource);
     this.$window = $window;
     this.$modal = $modal;
-    this.$scope =$scope;
+    this.$scope = $scope;
 
 
     //--------- PAGINATION PROPERTIES ----------
@@ -17,6 +17,8 @@ export class TeamController {
     this.numPerPage = 10;
     this.maxSize = 5;
 
+    $scope.$on("memberDeleted", () => {this.getTeamMembers();});
+    $scope.$on("cancelEditing", () => {this.getTeamMembers();});
 
     this.getTeamMembers();
   }

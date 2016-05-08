@@ -20,11 +20,11 @@ export function InternshipDirective() {
 }
 
 class InternshipController{
-  constructor( $window , InternshipsService) {
+  constructor( $window , InternshipsService, $rootScope) {
     'ngInject';
     SERVICE.set(this, InternshipsService.resource);
     this.$window = $window;
-
+    this.$rootScope = $rootScope;
 
   }
 
@@ -32,12 +32,28 @@ class InternshipController{
   delete() {
     if (this.$window.confirm('You sure you want to delete this internship?')) {
       SERVICE.get(this).delete({internshipId: this.model.id}).$promise.then(() => {
+        this.$rootScope.$broadcast("internshipDeleted");
         },
         (error) => {
           console.log(error.statusText);
         });
     }
   }
+
+
+  cancel(){ //todo: discuss if there is a better way to do the Cancel
+    this.$rootScope.$broadcast('cancelInternshipEditing');
+  }
+
+  save() {
+    this.model['wrapper'] = 'internship';
+    SERVICE.get(this).update({internshipId: this.model.id}, this.model).$promise.then((response) => {
+      console.log(response);
+    }, (error) => {
+      console.log(error.statusText);
+    })
+  }
+
 
 
 

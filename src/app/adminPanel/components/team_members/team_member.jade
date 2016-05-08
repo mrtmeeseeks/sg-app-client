@@ -1,5 +1,5 @@
 .media-left.media-middle(ng-show='!editing')
-  img.media-object.img-thumbnail(ng-src='{{tmc.model.photo}}')
+  img.media-object.img-thumbnail(ngf-thumbnail='tmc.model.photo')
 .media-body(ng-show='!editing')
   h3 {{ tmc.model.name}}
   p {{tmc.model.description}}
@@ -7,17 +7,18 @@
 
   // --------------  EDITING MODE ---------------
 .media-left.media-middle(ng-show='editing')
-  img.media-object.img-thumbnail(ng-src='{{tmc.model.photo}}')
+  img.media-object.img-thumbnail(ngf-thumbnail='tmc.model.photo')
+  input#photo(type='file', ngf-select='', ng-model='tmc.model.photo', name='photo', accept='image/*', ngf-max-size='2MB', required='', ngf-model-invalid='errorFile')
 .media-body(ng-show='editing')
   p
     label Name:
-    input.form-control(type='text', ng-value='tmc.model.name', placeholder='Name', ng-required='')
+    input.form-control(type='text', ng-model='tmc.model.name', placeholder='Name', ng-required='')
   p
     label Description:
     input.form-control(type='text', ng-model='tmc.model.description', placeholder='Description', ng-required='')
   br
-  //todo: save implementation and cancel implementation
-  button.btn.btn-success(type='submit' ng-click='editing = false' ) Save
-  button.btn.btn-info(type='submit' ng-click='editing = false') Cancel
-  button.btn.btn-danger.pull-right(type='button', ng-click='tmc.delete()')
+
+  button.btn.btn-success(type='button' ng-click='editing = false; tmc.saveEditing()' ) Save
+  button.btn.btn-info(type='button' ng-click=' tmc.cancelEditing(); editing = false') Cancel
+  button.btn.btn-danger.pull-right(type='button', ng-click='tmc.deleteMember()')
     | Delete

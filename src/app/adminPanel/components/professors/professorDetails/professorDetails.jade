@@ -41,7 +41,7 @@
             div(ng-bind="'Uploaded Succesfully'")
           button.btn.btn-success(ng-click='profDetail.saveProfessorEditing(profDetail.professorDetails.id)', type='submit')
             | Save
-          button.btn.btn-danger(type='button', ng-click='profDetail.deleteProfessor(profDetail.professorDetails.id)')
+          button.btn.btn-danger(type='button', ng-click='profDetail.deleteProfessor()')
             | Delete
         // ------------------ EVALUATIONS --------------------
         .row.team(ng-show='!editing')
