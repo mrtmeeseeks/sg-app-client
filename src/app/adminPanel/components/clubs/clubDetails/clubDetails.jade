@@ -16,8 +16,8 @@
                 img.media-object.img-thumbnail(ngf-thumbnail='clubDetail.club.logo')
               .media-body(ng-show='!editing')
                 h3.media-heading {{ clubDetail.club.name }}
-                p  President: {{ clubDetail.club.president }} the rosen plevneyev
-                p  Professor: {{ clubDetail.club.professor.name }} advisor of the club
+                p  President: {{ clubDetail.club.president }}
+                p  Professor: {{ clubDetail.club.professor_id }}
                 button.btn.btn-primary.pull-right(type='button', ng-click='editing = true; show=true; clubDetails.getProfessors()') Edit
 
                 // --------------  EDITING MODE ---------------
