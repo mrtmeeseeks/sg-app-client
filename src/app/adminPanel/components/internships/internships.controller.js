@@ -26,13 +26,16 @@ export class InternshipsController {
 
 
   getInternships() {
+    this.loading = true;
     SERVICE.get(this).query().$promise.then(response => {
         this.internshipsArray = response;
         this.pageChanged();
       },
       error => {
         console.log(error);
-      });
+      }).finally(()=> {
+      this.loading = false;
+    });
   }
 
 

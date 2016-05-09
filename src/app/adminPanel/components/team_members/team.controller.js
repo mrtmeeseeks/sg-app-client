@@ -17,27 +17,30 @@ export class TeamController {
     this.numPerPage = 10;
     this.maxSize = 5;
 
-    $scope.$on("memberDeleted", () => {this.getTeamMembers();});
-    $scope.$on("cancelEditing", () => {this.getTeamMembers();});
+    $scope.$on("memberDeleted", () => {
+      this.getTeamMembers();
+    });
+    $scope.$on("cancelEditing", () => {
+      this.getTeamMembers();
+    });
 
     this.getTeamMembers();
   }
 
 
-
-
-  getTeamMembers(){
-    SERVICE.get(this).query().$promise.then( response => {
+  getTeamMembers() {
+    this.loading = true;
+    SERVICE.get(this).query().$promise.then(response => {
       this.teamMembers = response;
       console.log(response);
       this.pageChanged();
 
     }, error => {
       console.log(error);
+    }).finally(()=> {
+      this.loading = false;
     });
   }
-
-
 
 
   addMember() {
@@ -51,17 +54,16 @@ export class TeamController {
   }
 
 
-
-
-
-  deleteTeamMember(memberId){
-    if(this.$window.confirm('You sure you want to delete this member?')) {
-      SERVICE.get(this).delete({memberId: memberId}).$promise.then((success) => {},
-        (error) => { console.log(error.statusText); });
+  deleteTeamMember(memberId) {
+    if (this.$window.confirm('You sure you want to delete this member?')) {
+      SERVICE.get(this).delete({memberId: memberId}).$promise.then((success) => {
+        },
+        (error) => {
+          console.log(error.statusText);
+        });
 
     }
   }
-
 
 
   //---------------- PAGINATION -----------------
