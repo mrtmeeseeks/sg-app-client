@@ -13,6 +13,7 @@
               button.btn.btn-info(ng-click='prof.addProfessor()')  Add Professor
           h1 Professors
           br
+          span(us-spinner='{radius:30, width:8, length: 16}' class='marginTop' ng-show='prof.loading')
           // NAVIGATION
           ul.media-list(tab-pane='', fade='', in='', active='')
             ul.nav.nav-tabs(role='tablist')

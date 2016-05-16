@@ -17,20 +17,18 @@ export class ClubsController {
   }
 
 
-
-
   getClubs() {
+    this.loading = true;
     SERVICE.get(this).query().$promise.then((response) => {
-        this.clubs= response;
+        this.clubs = response;
         this.pageChanged();
       },
       (error) => {
         console.log(error);
-      });
+      }).finally(()=> {
+      this.loading = false;
+    });
   }
-
-
-
 
 
   addClub() {
@@ -43,7 +41,6 @@ export class ClubsController {
     });
 
   }
-
 
 
   //------------ PAGINATION ------------

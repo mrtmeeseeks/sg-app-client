@@ -1,10 +1,11 @@
 const Q = new WeakMap();
 const WINDOW = new WeakMap();
+const STATE = new WeakMap();
 var edor = {};
 
 export class AuthInterceptor {
 
-  constructor($q, $window) {
+  constructor( $q, $window) {
 
     'ngInject';
     this.$q = $q;
@@ -12,14 +13,20 @@ export class AuthInterceptor {
 
     Q.set(edor, $q);
     WINDOW.set(edor, $window);
+    //STATE.set(edor, $state);
 
   }
 
 
   request(config) {
     config.headers = config.headers || {};
-    if (WINDOW.get(edor).sessionStorage["userInfo"] == "null" || WINDOW.get(edor).sessionStorage["userInfo"] == undefined) {
+    if ( WINDOW.get(edor).sessionStorage["userInfo"] === undefined) {
+      //STATE.get(edor).go('adminPanel.login');
+      //config.headers.Authorization = null;
+      console.log("session storage null");
+
     } else {
+      console.log("authorized");
       config.headers.Authorization = JSON.parse(WINDOW.get(edor).sessionStorage["userInfo"]).accessToken;
     }
     return config;
