@@ -16,15 +16,17 @@ export function NavbarDirective() {
 }
 
 class NavbarController {
-  constructor( $window) {
+  constructor( $window, AuthService) {
     'ngInject';
 
     this.$window = $window;
+    this.AuthService = AuthService;
   }
 
   logout() {
 
-    //this.$window.sessionStorage["userInfo"] = null;
+    this.AuthService.logout();
+
   }
 
 
