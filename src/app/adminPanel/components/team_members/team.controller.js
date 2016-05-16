@@ -10,6 +10,7 @@ export class TeamController {
     this.$modal = $modal;
     this.$scope = $scope;
 
+    console.log($window.sessionStorage["userInfo"]);
 
     //--------- PAGINATION PROPERTIES ----------
     this.paginationRange = [];
