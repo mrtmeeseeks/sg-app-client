@@ -23,7 +23,7 @@ import { MenuButtonDirective } from './directives/menuButton/menuButton.directiv
 import { InternshipDirective } from './components/internships/internship.directive';
 import { TeamMemberDirective } from './components/team_members/team_member.directive';
 var adminModule = 'adminPanel';
- angular.module(adminModule , [ 'ngAnimate', 'ngSanitize', 'ngResource', 'ui.router', 'ui.bootstrap', 'toastr', 'ngFileUpload'])
+ angular.module(adminModule , [ 'ngAnimate', 'ngSanitize', 'ngResource', 'ui.router',  'permission', 'permission.ui', 'ui.bootstrap', 'toastr', 'ngFileUpload', 'angularSpinner'])
   .constant('api', "http://sgaubg.herokuapp.com/api/")
   .config(AdminRouterConfig)
   .config(AdminConfig)

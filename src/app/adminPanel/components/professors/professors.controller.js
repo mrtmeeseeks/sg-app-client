@@ -29,14 +29,8 @@ export class ProfessorsController {
   }
 
 
-
-
-
-
-
-
   //---------- NAVIGATION ------------
-  select(setTab){
+  select(setTab) {
     this.tab = setTab;
     if (setTab === 2) {
       this.filtText = "bus";
@@ -69,13 +63,10 @@ export class ProfessorsController {
       this.filtText = "";
     }
   };
+
   isSelected(checkTab) {
     return (this.tab === checkTab);
   };
-
-
-
-
 
 
   addProfessor() {
@@ -89,14 +80,17 @@ export class ProfessorsController {
   }
 
 
-
-  getProfessors(){
-    SERVICE.get(edor).query().$promise.then( result => {
+  getProfessors() {
+    this.loading = true;
+    SERVICE.get(edor).query().$promise.then(result => {
       this.professorsArray = result;
       this.pageChanged();
+    }, error => {
+      console.log(error);
+    }).finally(()=> {
+      this.loading = false;
     });
   }
-
 
 
   //------------ PAGINATION ------------

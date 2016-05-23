@@ -1,15 +1,17 @@
 const SERVICE = new WeakMap();
-
+var professors = {};
 
 export class ClubDetailsController {
 
-  constructor($stateParams, ClubsService, $state, $window) {
+  constructor($stateParams, ClubsService, $state, $window, ProfessorsService) {
     'ngInject';
     this.$stateParams = $stateParams;
     this.$window = $window;
     SERVICE.set(this, ClubsService.resource);
+    SERVICE.set(professors, ProfessorsService.resource);
     this.$state = $state;
     this.getClub($stateParams.clubId);
+    this.getProfessors();
   }
 
 

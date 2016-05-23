@@ -40,11 +40,6 @@ export class LoginController {
 
 
 
-  //--------------- LOGOUT ------------------- todo: logout implementation
-  logout(){
-
-  }
-
 
 
 

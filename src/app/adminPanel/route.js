@@ -13,7 +13,13 @@ export function AdminRouterConfig($stateProvider, $urlRouterProvider) {
     .state('adminPanel.dashboard', {
       url: '/dashboard',
       templateUrl: 'app/adminPanel/components/dashboard/dashboard.html',
-      controllerAs: 'dashboard'
+      controllerAs: 'dashboard',
+      data: {
+        permissions: {
+          only: 'admin',
+          redirectTo: 'adminPanel.login'
+        }
+      }
     })
     .state('adminPanel.team', {
       url: '/team',

@@ -37,8 +37,6 @@ export class AuthService {
           accessToken: response.data.extract.auth_token
         };
 
-        console.log("------------");
-        console.log(this.userInfo);
         this.$rootScope.$emit('user:loggedin', this.userInfo); //broadcast to all controllers that  the user has logged in
         this.$window.sessionStorage["userInfo"] = JSON.stringify(this.userInfo);//store the data on the client
         deferred.resolve();
@@ -54,24 +52,13 @@ export class AuthService {
 
 
 
-////LOG OUT todo: ask for endpoint?
-//  logout() {
-//  var deferred = Q.get(this).defer();
-//
-//  HTTP.get(this)({
-//    url: this.api + '/account/logout' ,
-//    method: 'POST',
-//    headers:  {'Authorization': 'Bearer '+  JSON.parse($window.sessionStorage["userInfo"]).accessToken }
-//
-//  }).then( function(){
-//    this.$window.sessionStorage["userInfo"]  = null;
-//    this.$rootScope.$emit('user:loggedout'); //broadcast to all controllers that  the user has logged out
-//    deferred.resolve();
-//  }, function(error) {
-//    deferred.reject();
-//  });
-//  return deferred.promise;
-//};
+//LOG OUT todo: handle error cases
+  logout() {
+
+    delete this.$window.sessionStorage["userInfo"];
+    this.$rootScope.$emit('user:loggedout'); //broadcast to all controllers that  the user has logged out
+
+}
 
 
 
@@ -94,6 +81,20 @@ export class AuthService {
 //
 //  return deferred.promise;
 //};
+
+
+
+  //currentUser
+  currentUser () {
+  if (this.$window.sessionStorage["userInfo"] != null) {
+    return JSON.parse($window.sessionStorage["userInfo"]);
+  } else {
+    return null;
+  }
+
+};
+
+
 
 
 

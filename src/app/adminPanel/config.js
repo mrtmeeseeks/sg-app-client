@@ -1,7 +1,7 @@
 /**
  * Created by test most on 5/4/2016.
  */
-export function AdminConfig ($logProvider, toastrConfig, $provide, $httpProvider) {
+export function AdminConfig ($logProvider, toastrConfig, $httpProvider) {
   'ngInject';
   // Enable log
   $logProvider.debugEnabled(true);
