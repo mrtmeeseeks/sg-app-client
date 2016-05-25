@@ -38,7 +38,6 @@ export class AuthService {
           userRole: response.data.extract.role
         };
 
-
         this.$rootScope.$emit('user:loggedin', this.userInfo); //broadcast to all controllers that  the user has logged in
         this.$window.sessionStorage["userInfo"] = JSON.stringify(this.userInfo);//store the data on the client
         deferred.resolve();

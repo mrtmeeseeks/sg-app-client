@@ -1,11 +1,13 @@
 const Q = new WeakMap();
 const WINDOW = new WeakMap();
-const INJECTOR = new WeakMap();
+
+const STATE = new WeakMap();
 var edor = {};
 
 export class AuthInterceptor {
 
-  constructor( $q, $window, $injector) {
+
+  constructor( $q, $window) {
 
     'ngInject';
     this.$q = $q;
@@ -13,8 +15,8 @@ export class AuthInterceptor {
 
     Q.set(edor, $q);
     WINDOW.set(edor, $window);
-    INJECTOR.set(edor, $injector);
 
+    //STATE.set(edor, $state);
 
   }
 
@@ -36,7 +38,7 @@ export class AuthInterceptor {
   }
 
 
-  
+
   responseError(rejection) {
     return Q.get(edor).reject(rejection);
 
