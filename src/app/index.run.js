@@ -2,9 +2,16 @@ export function runBlock($log, AuthService, PermissionStore) {
   'ngInject';
   $log.debug('runBlock end');
 
-  //todo: should the api return a user permission attribute on login?
-  //PermissionStore.definePermission('admin', () =>
-  //  AuthService.currentUser()
-  //);
+
+  PermissionStore.definePermission('anonymous', () => {
+      return !AuthService.currentUser();
+    }
+  )
+  ;
+
+  PermissionStore.definePermission('admin', () => {
+    return AuthService.currentUser().userRole == "admin";
+    }
+  );
 
 }

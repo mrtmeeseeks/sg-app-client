@@ -34,8 +34,10 @@ export class AuthService {
 
 
         this.userInfo = {//generate an access token on the server for the user
-          accessToken: response.data.extract.auth_token
+          accessToken: response.data.extract.auth_token,
+          userRole: response.data.extract.role
         };
+
 
         this.$rootScope.$emit('user:loggedin', this.userInfo); //broadcast to all controllers that  the user has logged in
         this.$window.sessionStorage["userInfo"] = JSON.stringify(this.userInfo);//store the data on the client
@@ -55,7 +57,10 @@ export class AuthService {
 //LOG OUT todo: handle error cases
   logout() {
 
-    delete this.$window.sessionStorage["userInfo"];
+    // Removing all permissions
+    var temp = JSON.parse(this.$window.sessionStorage["userInfo"]);
+    temp.userRole = "";
+    this.$window.sessionStorage["userInfo"] = JSON.stringify(temp);
     this.$rootScope.$emit('user:loggedout'); //broadcast to all controllers that  the user has logged out
 
 }
@@ -87,7 +92,7 @@ export class AuthService {
   //currentUser
   currentUser () {
   if (this.$window.sessionStorage["userInfo"] != null) {
-    return JSON.parse($window.sessionStorage["userInfo"]);
+    return JSON.parse(this.$window.sessionStorage["userInfo"]);
   } else {
     return null;
   }

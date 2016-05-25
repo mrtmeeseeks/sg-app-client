@@ -25,37 +25,73 @@ export function AdminRouterConfig($stateProvider, $urlRouterProvider) {
       url: '/team',
       templateUrl: 'app/adminPanel/components/team_members/team.html',
       controller: 'TeamController',
-      controllerAs: 'team'
+      controllerAs: 'team',
+      data: {
+        permissions: {
+          only: 'admin',
+          redirectTo: 'adminPanel.login'
+        }
+      }
     })
     .state('adminPanel.professors', {
       url: '/professors',
       templateUrl: 'app/adminPanel/components/professors/professors.html',
       controller: 'ProfessorsController',
-      controllerAs: 'prof'
+      controllerAs: 'prof',
+      data: {
+        permissions: {
+          only: 'admin',
+          redirectTo: 'adminPanel.login'
+        }
+      }
     })
     .state('adminPanel.professorDetails', {
       url: '/professors/:professorId',
       templateUrl: 'app/adminPanel/components/professors/professorDetails/professorDetails.html',
       controller: 'ProfessorDetailsController',
-      controllerAs: 'profDetail'
+      controllerAs: 'profDetail',
+      data: {
+        permissions: {
+          only: 'admin',
+          redirectTo: 'adminPanel.login'
+        }
+      }
     })
     .state('adminPanel.clubs', {
       url: '/clubs',
       templateUrl: 'app/adminPanel/components/clubs/clubs.html',
       controller: 'ClubsController',
-      controllerAs: 'clubsCtrl'
+      controllerAs: 'clubsCtrl',
+      data: {
+        permissions: {
+          only: 'admin',
+          redirectTo: 'adminPanel.login'
+        }
+      }
     })
     .state('adminPanel.clubDetails', {
       url: '/clubs/:clubId',
       templateUrl: 'app/adminPanel/components/clubs/clubDetails/clubDetails.html',
       controller: 'ClubDetailsController',
-      controllerAs: 'clubDetail'
+      controllerAs: 'clubDetail',
+      data: {
+        permissions: {
+          only: 'admin',
+          redirectTo: 'adminPanel.login'
+        }
+      }
     })
     .state('adminPanel.internships', {
       url: '/internships',
       templateUrl: 'app/adminPanel/components/internships/internships.html',
       controller: 'InternshipsController',
-      controllerAs: 'internCtrl'
+      controllerAs: 'internCtrl',
+      data: {
+        permissions: {
+          only: 'admin',
+          redirectTo: 'adminPanel.login'
+        }
+      }
     })
 
   ;
