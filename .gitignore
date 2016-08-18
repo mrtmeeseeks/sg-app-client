@@ -39,9 +39,9 @@
  /coverage/
 node_modules
  # Typing #
- /src/typings/tsd/
- /typings/
- /tsd_typings/
+ src/typings/tsd/
+ typings/
+ tsd_typings/
  node_modules/
 
  # Dist #
@@ -60,3 +60,4 @@ node_modules
  # IDE #
  .idea/
  *.swp
+ .idea
