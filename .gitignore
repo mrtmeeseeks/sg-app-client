@@ -42,6 +42,7 @@
  /src/typings/tsd/
  /typings/
  /tsd_typings/
+ node_modules/
 
  # Dist #
  /dist
