@@ -37,7 +37,7 @@
 
  # Coverage #
  /coverage/
-
+node_modules
  # Typing #
  /src/typings/tsd/
  /typings/
