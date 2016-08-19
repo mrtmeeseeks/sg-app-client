@@ -26,11 +26,12 @@ export class Login {
         this.password = this.form.controls['password'];
     }
 
-    public onSubmit(values:Object):void {
+    public onSubmit(values):void {
         this.submitted = true;
 
         if (this.form.valid) {
             this.userService.login(values.email, values.password).then((result) => {
+                console.log('asd');
                 this.router.navigate(['admin/dashboard/professors']);
             }, (error) => {
                 //todo handle login failure

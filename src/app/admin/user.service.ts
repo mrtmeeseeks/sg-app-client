@@ -7,6 +7,7 @@
 
 import {Injectable, Inject} from '@angular/core';
 import { Http, Headers } from '@angular/http';
+import 'rxjs/add/operator/toPromise';
 
 
 @Injectable()
@@ -32,11 +33,11 @@ export class UserService {
             )
             .toPromise()
             .then((res) => {
-                let body = res.json().extract;
+
+                let body = res.json();
                 localStorage.setItem('auth_token', body.auth_token);
                 localStorage.setItem('role', body.role);
                 this.loggedIn = true;
-
                 return body;
             })
             .catch(this.handleError);

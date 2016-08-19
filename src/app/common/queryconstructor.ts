@@ -6,13 +6,14 @@ export function QueryConstructor(page: number, itemsPerPage: number): URLSearchP
         if(page == 1 ){
             skip = 0
         } else {
+            page --;
             skip = page*itemsPerPage;
         }
 
     var params: URLSearchParams = new URLSearchParams();
 
-    params.set('top', itemsPerPage);
-    params.set('skip', skip);
+    params.set('top', itemsPerPage.toString());
+    params.set('skip', skip.toString());
 
 
     return params;

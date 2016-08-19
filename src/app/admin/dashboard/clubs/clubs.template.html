@@ -1,0 +1,22 @@
+<h1>Clubs</h1>
+
+
+<div class="list-group">
+
+    <div class="list-group-item" *ngFor="let club of listing.collection">
+        <div class="media"  >
+            <a class="media-left" href="#">
+                <img class=" img-circle media-object media-img" src="{{club.logo}}" alt="{{club.name}}">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">{{club.name}}</h4>
+                <small class="text-muted">
+                   President: {{club.president}}
+                </small>
+            </div>
+        </div>
+    </div>
+
+</div>
+<pagination [totalItems]="listing.count" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>
+

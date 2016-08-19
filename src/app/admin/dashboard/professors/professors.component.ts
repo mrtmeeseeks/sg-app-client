@@ -27,12 +27,9 @@ export class Professors implements  OnInit{
     }
     
    
-
-
+    
     public pageChanged(event:any):void {
         this.loadProfessors(event.page, event.itemsPerPage);
-        console.log('Page changed to: ' + event.page);
-        console.log('Number items per page: ' + event.itemsPerPage);
     };
 
 

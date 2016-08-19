@@ -1,6 +1,6 @@
 
 import { Injectable, Inject } from '@angular/core';
-import { Http,  URLSearchParams  } from '@angular/http';
+import { Http  } from '@angular/http';
 import { Professor } from './professor.model';
 import { Listing } from '../../../common/listing.model'
 import { QueryConstructor} from '../../../common/queryconstructor'
@@ -21,7 +21,7 @@ export class ProfessorsService {
                 let body = res.json();
                 let listing = new Listing<Professor>();
 
-                listing.collection = body.Items ;
+                listing.collection = body.Items as Professor[] ;
                 listing.count = body.Count;
 
                 return listing;
