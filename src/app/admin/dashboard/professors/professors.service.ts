@@ -14,12 +14,17 @@ export class ProfessorsService {
 
     }
 
-    query(top:number , skip:number) {
-        return this.http.get(this.professorsUrl, {search:  QueryConstructor(top, skip)})
+    query(page:number, itemsPerPage: number) {
+        return this.http.get(this.professorsUrl, {search:  QueryConstructor(page, itemsPerPage)})
             .toPromise()
-            .then(res => { let body = res.json()
-            console.log(body);
+            .then(res => {
+                let body = res.json();
+                let listing = new Listing<Professor>();
 
+                listing.collection = body.Items ;
+                listing.count = body.Count;
+
+                return listing;
             } )
             .catch(this.handleError);
     }

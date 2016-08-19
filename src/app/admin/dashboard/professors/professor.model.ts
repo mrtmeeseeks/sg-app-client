@@ -1,5 +1,5 @@
 export class Professor {
-    id:number;
+    id:string;
     name: string;
     department: string;
     photo: string;

@@ -2,6 +2,5 @@
 
 export class Listing<T> {
     collection: Array<T>;
-    skip: number;
-    top: number;
+    count: number;
 }
