@@ -1,5 +1,6 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 import {FormGroup, AbstractControl, FormBuilder, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
 import {UserService} from "../user.service";
 
 @Component({
@@ -15,7 +16,7 @@ export class Login {
     public password:AbstractControl;
     public submitted:boolean = false;
 
-    constructor(fb:FormBuilder,  private userService: UserService) {
+    constructor(fb:FormBuilder,  private userService: UserService, private router: Router) {
         this.form = fb.group({
             'email': ['', Validators.compose([Validators.required, Validators.minLength(4)])],
             'password': ['', Validators.compose([Validators.required, Validators.minLength(4)])]
@@ -29,12 +30,10 @@ export class Login {
         this.submitted = true;
 
         if (this.form.valid) {
-            
-            this.userService.login(values.email, values.password).subscribe((result) => {
-                if (result) {
-                    console.log('asd');
-                   // this.router.navigate(['']);
-                }
+            this.userService.login(values.email, values.password).then((result) => {
+                this.router.navigate(['admin/dashboard/professors']);
+            }, (error) => {
+                //todo handle login failure
             });
         }
     }

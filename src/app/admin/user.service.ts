@@ -18,6 +18,7 @@ export class UserService {
         localStorage.getItem('auth_token');
     }
 
+
     login(email, password) {
         let headers = new Headers();
 
@@ -25,21 +26,20 @@ export class UserService {
 
         return this.http
             .post(
-                this.api + "v1/admins_sessions",
+                this.api + "/admins_sessions",
                 JSON.stringify({email, password}),
-                {headers}
+                {headers: headers}
             )
-            .map(res => res.json())
-            .map((res) => {
+            .toPromise()
+            .then((res) => {
+                let body = res.json().extract;
+                localStorage.setItem('auth_token', body.auth_token);
+                localStorage.setItem('role', body.role);
+                this.loggedIn = true;
 
-                if (res.success) {
-                    localStorage.setItem('auth_token', res.auth_token);
-                    localStorage.setItem('role', res.role);
-                    this.loggedIn = true;
-                }
-                
-                return res.success;
-            });
+                return body;
+            })
+            .catch(this.handleError);
     }
 
     logout() {
@@ -50,6 +50,12 @@ export class UserService {
 
     isLoggedIn() {
         return this.loggedIn;
+    }
+
+
+    private handleError(error: any) {
+        let body = error.json().extract;
+        return Promise.reject(body.message || body);
     }
 }
 

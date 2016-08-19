@@ -7,7 +7,7 @@ import { AdminGuard} from '../app/admin/adminGuard'
 import { UserService} from '../app/admin/user.service';
 // Environment Providers
 let PROVIDERS = [
-  {provide: 'ApiEndpoint', useValue: "http://sgaubg.herokuapp.com/api/"},
+  {provide: 'ApiEndpoint', useValue: "http://sgaubg.herokuapp.com/api/v1"},
   UserService,
   AdminGuard
   // common env directives

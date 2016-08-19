@@ -1,0 +1,20 @@
+<h1>Professors</h1>
+
+
+ <div class="list-group">
+
+         <div class="media list-group-item" *ngFor="let professor of professors">
+             <a class="media-left" href="#">
+                 <img class=" img-circle img-fluid media-object media-img" src="{{professor.photo}}" alt="{{professor.name}}">
+             </a>
+             <div class="media-body">
+                 <h4 class="media-heading">{{professor.name}}</h4>
+                 <small class="text-muted">
+                    {{professor.department}}
+                 </small>
+                 {{professor.description}}
+             </div>
+         </div>
+
+ </div>
+

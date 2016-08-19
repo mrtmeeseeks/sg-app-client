@@ -1,0 +1,1 @@
+export { Professors}  from './professors.component'
