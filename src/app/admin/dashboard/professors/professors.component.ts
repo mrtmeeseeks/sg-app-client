@@ -12,7 +12,7 @@ import {PAGINATION_DIRECTIVES} from "ng2-bootstrap/ng2-bootstrap";
     styleUrls: ['./professors.styles.css'],
     template: require('./professors.template.html'),
 })
-export class Professors implements  OnInit{
+export class Professors implements OnInit{
      listing: Listing<Professor>;
       public currentPage:number = 1;
 

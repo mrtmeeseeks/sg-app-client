@@ -1,0 +1,1 @@
+export {Internships} from './internships.component';

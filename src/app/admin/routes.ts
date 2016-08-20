@@ -6,6 +6,7 @@ import {Dashboard} from "./dashboard/dashboard.component";
 import {Professors} from "./dashboard/professors/professors.component";
 import {Clubs} from "./dashboard/clubs/clubs.component"
 import {TeamMembers} from "./dashboard/team_members/team_members.component";
+import {Internships} from "./dashboard/internships/internships.component";
 // async components must be named routes for WebpackAsyncRoute
 export const AdminRoutes:RouterConfig = [
     {
@@ -16,7 +17,8 @@ export const AdminRoutes:RouterConfig = [
                 children: [
                     {path:'professors' , component: Professors },
                     {path: 'clubs', component: Clubs},
-                    {path: 'team_members' , component: TeamMembers}
+                    {path: 'team_members' , component: TeamMembers},
+                    {path: 'internships', component: Internships}
                 ]}
 
         ]
