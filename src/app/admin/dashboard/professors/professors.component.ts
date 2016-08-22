@@ -1,8 +1,8 @@
 import {Component, ViewEncapsulation , OnInit} from '@angular/core';
-import {ProfessorsService} from './professors.service'
-import {Professor} from './professor.model'
 import {Listing} from '../../../common/listing.model'
 import {PAGINATION_DIRECTIVES} from "ng2-bootstrap/ng2-bootstrap";
+import {Professor} from "../../../common/models/professor.model";
+import {ProfessorsService} from "../../../common/services/professors.service";
 
 @Component({
     selector: 'professors',
@@ -12,11 +12,11 @@ import {PAGINATION_DIRECTIVES} from "ng2-bootstrap/ng2-bootstrap";
     styleUrls: ['./professors.styles.css'],
     template: require('./professors.template.html'),
 })
-export class Professors implements OnInit{
+export class AdminProfessors implements OnInit{
      listing: Listing<Professor>;
       public currentPage:number = 1;
 
-    constructor(private service:ProfessorsService) {
+    constructor(private _service:ProfessorsService) {
      
     }
     
@@ -35,7 +35,7 @@ export class Professors implements OnInit{
 
     private loadProfessors(page:number, itemsPerPage: number) {
         
-        this.service.query(page,itemsPerPage).then(listing => this.listing = listing);
+        this._service.query(page,itemsPerPage).then(listing => this.listing = listing);
     }
 
    

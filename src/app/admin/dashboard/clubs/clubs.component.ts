@@ -3,25 +3,25 @@
  */
 import {Component, ViewEncapsulation, OnInit} from '@angular/core';
 import {PAGINATION_DIRECTIVES} from "ng2-bootstrap/ng2-bootstrap";
-import {ClubsService} from "./clubs.service";
-import {Club} from "./club.model";
 import {Listing} from "../../../common/listing.model";
+import {Club} from "../../../common/models/club.model";
+import {ClubsService} from "../../../common/services/clubs.service";
 
 @Component({
     selector: 'clubs',
     template:require('./clubs.template.html'),
     directives: [PAGINATION_DIRECTIVES],
     providers: [ClubsService],
-    encapsulation: ViewEncapsulation.none,
+    encapsulation: ViewEncapsulation.None,
     styleUrls: ['./clubs.styles.css']
 
 })
 
-export class Clubs implements OnInit{
+export class AdminClubs implements OnInit{
     listing: Listing<Club>;
     public currentPage:number = 1;
 
-    constructor(private service:ClubsService) {
+    constructor(private _service:ClubsService) {
 
     }
 
@@ -40,7 +40,7 @@ export class Clubs implements OnInit{
 
     private loadClubs(page:number, itemsPerPage: number) {
 
-        this.service.query(page,itemsPerPage).then(listing => this.listing = listing);
+        this._service.query(page,itemsPerPage).then(listing => this.listing = listing);
     }
 
 

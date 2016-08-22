@@ -2,6 +2,7 @@
  * Created by hgeorgiev on 8/20/16.
  */
 export class TeamMember {
+    id:number;
     name:string;
     title:string;
     description:string;

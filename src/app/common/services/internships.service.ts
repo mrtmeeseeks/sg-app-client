@@ -1,9 +1,9 @@
 
 import {Injectable, Inject} from "@angular/core";
-import {Internship} from './internship.model';
+import {Internship} from '../models/internship.model';
 import {Http} from "@angular/http";
-import {QueryConstructor} from "../../../common/queryconstructor";
-import {Listing} from "../../../common/listing.model";
+import {QueryConstructor} from "../queryconstructor";
+import {Listing} from "../listing.model";
 
 @Injectable()
 

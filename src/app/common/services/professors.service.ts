@@ -1,10 +1,10 @@
 
 import { Injectable, Inject } from '@angular/core';
 import { Http  } from '@angular/http';
-import { Professor } from './professor.model';
-import { Listing } from '../../../common/listing.model'
-import { QueryConstructor} from '../../../common/queryconstructor'
+import { Listing } from '../listing.model';
+import {QueryConstructor} from '../queryconstructor';
 import 'rxjs/add/operator/toPromise';
+import {Professor} from "../models/professor.model";
 
 @Injectable()
 export class ProfessorsService {

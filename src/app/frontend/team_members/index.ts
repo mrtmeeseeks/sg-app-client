@@ -1,0 +1,1 @@
+export {FrontTeamMembers} from 'team_members.component'

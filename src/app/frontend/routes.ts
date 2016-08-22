@@ -3,9 +3,13 @@
  */
 import {RouterConfig} from "@angular/router";
 import {Home} from "./home/home.component";
+import {FrontTeamMembers} from "./team_members/team_members.component";
+import {FrontClubs} from "./clubs/clubs.component";
 
-// async components must be named routes for WebpackAsyncRoute
+
 export const FrontEndRoutes:RouterConfig = [
     { path: '',      component: Home },
     { path: 'home',  component: Home },
+    { path: 'members' , component: FrontTeamMembers},
+    { path: 'clubs' , component: FrontClubs}
 ];

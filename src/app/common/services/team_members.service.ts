@@ -1,16 +1,10 @@
-/**
- * Created by hgeorgiev on 8/20/16.
- */
-/**
- * Created by hgeorgiev on 8/19/16.
- */
 
 import { Injectable, Inject } from '@angular/core';
 import { Http } from '@angular/http';
-import { TeamMember} from './team_member.model';
-import { Listing } from '../../../common/listing.model'
-import { QueryConstructor} from '../../../common/queryconstructor'
+import { Listing } from '../listing.model'
 import 'rxjs/add/operator/toPromise';
+import {TeamMember} from "../models/team_member.model";
+import {QueryConstructor} from "../queryconstructor";
 
 @Injectable()
 export class TeamMembersService {

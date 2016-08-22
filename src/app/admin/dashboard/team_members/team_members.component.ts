@@ -1,30 +1,25 @@
-/**
- * Created by hgeorgiev on 8/20/16.
- */
-/**
- * Created by hgeorgiev on 8/19/16.
- */
+
 import {Component, ViewEncapsulation, OnInit} from '@angular/core';
 import {PAGINATION_DIRECTIVES} from "ng2-bootstrap/ng2-bootstrap";
-import {TeamMembersService} from "./team_members.service";
-import {TeamMember} from "./team_member.model";
 import {Listing} from "../../../common/listing.model";
+import {TeamMember} from "../../../common/models/team_member.model";
+import {TeamMembersService} from "../../../common/services/team_members.service";
 
 @Component({
     selector: 'clubs',
     template:require('./team_members.template.html'),
     directives: [PAGINATION_DIRECTIVES],
     providers: [TeamMembersService],
-    encapsulation: ViewEncapsulation.none,
+    encapsulation: ViewEncapsulation.None,
     styleUrls: ['./team_members.styles.css']
 
 })
 
-export class TeamMembers implements OnInit{
+export class AdminTeamMembers implements OnInit{
     listing: Listing<TeamMember>;
     public currentPage:number = 1;
 
-    constructor(private service:TeamMembersService) {
+    constructor(private _service:TeamMembersService) {
 
     }
 
@@ -43,7 +38,7 @@ export class TeamMembers implements OnInit{
 
     private loadTeamMembers(page:number, itemsPerPage: number) {
 
-        this.service.query(page,itemsPerPage).then(listing => this.listing = listing);
+        this._service.query(page,itemsPerPage).then(listing => this.listing = listing);
     }
 
 

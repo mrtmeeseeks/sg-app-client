@@ -4,9 +4,9 @@
 
 import { Injectable, Inject } from '@angular/core';
 import { Http } from '@angular/http';
-import { Club } from './club.model';
-import { Listing } from '../../../common/listing.model'
-import { QueryConstructor} from '../../../common/queryconstructor'
+import { Club } from '../models/club.model';
+import { Listing } from '../listing.model'
+import { QueryConstructor} from '../queryconstructor'
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()

@@ -2,56 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d27a7b0c-f9a9-4682-9408-24d6d62bd8cc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/dashboard/shared/navbar/home-navbar.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/dashboard/shared/navbar/home-navbar.template.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/dashboard/shared/navbar/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/frontend/home/carousel.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/frontend/home/carousel.template.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/frontend/routes.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/frontend/shared/footer/footer.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/frontend/shared/footer/footer.styles.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/frontend/shared/footer/footer.template.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/frontend/shared/footer/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/frontend/shared/navbar/navbar.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/frontend/shared/navbar/navbar.styles.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/frontend/shared/navbar/navbar.template.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/about/about.component.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/about/about.spec.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/about/index.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/detail/detail.component.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/detail/index.component.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/detail/index.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/detail/routes.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/home/home.e2e.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/home/home.spec.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/home/navbar/navbar.component.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/home/navbar/navbar.template.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/home/x-large/index.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/home/x-large/x-large.directive.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/home/x-large/x-large.spec.ts" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/admin/dashboard/shared/index.ts" afterPath="$PROJECT_DIR$/src/app/admin/dashboard/shared/sidebar/index.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/admin/dashboard/shared/sidebar.component.ts" afterPath="$PROJECT_DIR$/src/app/admin/dashboard/shared/sidebar/sidebar.component.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/admin/dashboard/shared/sidebar.styles.css" afterPath="$PROJECT_DIR$/src/app/admin/dashboard/shared/sidebar/sidebar.styles.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/admin/dashboard/shared/sidebar.template.html" afterPath="$PROJECT_DIR$/src/app/admin/dashboard/shared/sidebar/sidebar.template.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/home/home.component.ts" afterPath="$PROJECT_DIR$/src/app/frontend/home/home.component.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/home/home.style.css" afterPath="$PROJECT_DIR$/src/app/frontend/home/home.style.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/home/home.template.html" afterPath="$PROJECT_DIR$/src/app/frontend/home/home.template.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/home/index.ts" afterPath="$PROJECT_DIR$/src/app/frontend/index.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/home/navbar/index.ts" afterPath="$PROJECT_DIR$/src/app/frontend/shared/navbar/index.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/home/title/index.ts" afterPath="$PROJECT_DIR$/src/app/frontend/shared/title/index.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/home/title/title.service.ts" afterPath="$PROJECT_DIR$/src/app/frontend/shared/title/title.service.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/home/title/title.spec.ts" afterPath="$PROJECT_DIR$/src/app/frontend/shared/title/title.spec.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/common/models/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/frontend/clubs/clubs.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/frontend/clubs/clubs.template.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/frontend/clubs/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/frontend/internships/internships.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/frontend/shared/navbar/navroute.model.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/frontend/team_members/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/frontend/team_members/team_members.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/frontend/team_members/team_members.template.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/admin/dashboard/clubs/club.model.ts" afterPath="$PROJECT_DIR$/src/app/common/models/club.model.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/admin/dashboard/clubs/clubs.service.ts" afterPath="$PROJECT_DIR$/src/app/common/services/clubs.service.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/admin/dashboard/internships/internship.model.ts" afterPath="$PROJECT_DIR$/src/app/common/models/internship.model.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/admin/dashboard/internships/internships.service.ts" afterPath="$PROJECT_DIR$/src/app/common/services/internships.service.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/admin/dashboard/professors/professor.model.ts" afterPath="$PROJECT_DIR$/src/app/common/models/professor.model.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/admin/dashboard/professors/professors.service.ts" afterPath="$PROJECT_DIR$/src/app/common/services/professors.service.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/admin/dashboard/team_members/team_member.model.ts" afterPath="$PROJECT_DIR$/src/app/common/models/team_member.model.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/admin/dashboard/team_members/team_members.service.ts" afterPath="$PROJECT_DIR$/src/app/common/services/team_members.service.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/admin/adminGuard.ts" afterPath="$PROJECT_DIR$/src/app/admin/adminGuard.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/admin/dashboard/dashboard.component.ts" afterPath="$PROJECT_DIR$/src/app/admin/dashboard/dashboard.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/admin/dashboard/dashboard.styles.css" afterPath="$PROJECT_DIR$/src/app/admin/dashboard/dashboard.styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/admin/dashboard/dashboard.template.html" afterPath="$PROJECT_DIR$/src/app/admin/dashboard/dashboard.template.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/admin/dashboard/internships/internships.service.ts" afterPath="$PROJECT_DIR$/src/app/admin/dashboard/internships/internships.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/admin/login/login.component.ts" afterPath="$PROJECT_DIR$/src/app/admin/login/login.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/admin/user.service.ts" afterPath="$PROJECT_DIR$/src/app/admin/user.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.component.ts" afterPath="$PROJECT_DIR$/src/app/app.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.routes.ts" afterPath="$PROJECT_DIR$/src/app/app.routes.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/admin/dashboard/clubs/clubs.component.ts" afterPath="$PROJECT_DIR$/src/app/admin/dashboard/clubs/clubs.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/admin/dashboard/clubs/index.ts" afterPath="$PROJECT_DIR$/src/app/admin/dashboard/clubs/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/admin/dashboard/internships/index.ts" afterPath="$PROJECT_DIR$/src/app/admin/dashboard/internships/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/admin/dashboard/internships/internships.component.ts" afterPath="$PROJECT_DIR$/src/app/admin/dashboard/internships/internships.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/admin/dashboard/professors/index.ts" afterPath="$PROJECT_DIR$/src/app/admin/dashboard/professors/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/admin/dashboard/professors/professors.component.ts" afterPath="$PROJECT_DIR$/src/app/admin/dashboard/professors/professors.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/admin/dashboard/team_members/index.ts" afterPath="$PROJECT_DIR$/src/app/admin/dashboard/team_members/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/admin/dashboard/team_members/team_members.component.ts" afterPath="$PROJECT_DIR$/src/app/admin/dashboard/team_members/team_members.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/admin/routes.ts" afterPath="$PROJECT_DIR$/src/app/admin/routes.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/common/error_handler.ts" afterPath="$PROJECT_DIR$/src/app/common/error_handler.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/frontend/routes.ts" afterPath="$PROJECT_DIR$/src/app/frontend/routes.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/frontend/shared/footer/footer.styles.css" afterPath="$PROJECT_DIR$/src/app/frontend/shared/footer/footer.styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/frontend/shared/navbar/navbar.component.ts" afterPath="$PROJECT_DIR$/src/app/frontend/shared/navbar/navbar.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/frontend/shared/navbar/navbar.template.html" afterPath="$PROJECT_DIR$/src/app/frontend/shared/navbar/navbar.template.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/platform/browser-providers.ts" afterPath="$PROJECT_DIR$/src/platform/browser-providers.ts" />
     </list>
     <ignored path="sg_app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,21 +55,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="navbar.template.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/frontend/shared/navbar/navbar.template.html">
+      <file leaf-file-name="navbar.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/frontend/shared/navbar/navbar.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+            <state relative-caret-position="375">
+              <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#61#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navroute.model.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/frontend/shared/navbar/navroute.model.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/frontend/home/home.component.ts">
+      <file leaf-file-name="clubs.template.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/frontend/clubs/clubs.template.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navbar.template.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/frontend/shared/navbar/navbar.template.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="internships.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/frontend/internships/internships.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
               </folding>
@@ -94,72 +109,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.template.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/frontend/home/home.template.html">
+      <file leaf-file-name="error_handler.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/common/error_handler.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            <state relative-caret-position="90">
+              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navbar.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/frontend/shared/navbar/navbar.component.ts">
+      <file leaf-file-name="clubs.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/frontend/clubs/clubs.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.styles.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/frontend/shared/footer/footer.styles.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.template.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/frontend/shared/footer/footer.template.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/frontend/shared/footer/footer.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="professors.service.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/professors/professors.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/frontend/shared/footer/index.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="28" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
-              <folding />
+            <state relative-caret-position="150">
+              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#48#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -167,11 +134,29 @@
       <file leaf-file-name="routes.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/frontend/routes.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding>
-                <element signature="e#44#89#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navbar.styles.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/frontend/shared/navbar/navbar.styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="club.model.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/common/models/club.model.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -193,34 +178,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/admin/dashboard/clubs/club.ts" />
-        <option value="$PROJECT_DIR$/src/app/admin/dashboard/clubs/club.model.ts" />
-        <option value="$PROJECT_DIR$/src/app/admin/dashboard/clubs/clubs.template.html" />
-        <option value="$PROJECT_DIR$/src/app/admin/dashboard/team_members/team_member.model.ts" />
-        <option value="$PROJECT_DIR$/src/app/admin/dashboard/clubs/clubs.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/admin/dashboard/clubs/clubs.styles.css" />
-        <option value="$PROJECT_DIR$/src/app/admin/dashboard/clubs/clubs.service.ts" />
-        <option value="$PROJECT_DIR$/src/app/admin/dashboard/team_members/team_members.service.ts" />
-        <option value="$PROJECT_DIR$/src/app/admin/dashboard/team_members/team_members.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/admin/dashboard/team_members/team_members.styles.css" />
-        <option value="$PROJECT_DIR$/src/app/admin/dashboard/team_members/team_members.template.html" />
-        <option value="$PROJECT_DIR$/src/app/admin/dashboard/team_members/index.ts" />
-        <option value="$PROJECT_DIR$/src/app/admin/dashboard/internships/internship.model.ts" />
-        <option value="$PROJECT_DIR$/src/app/admin/dashboard/internships/index.ts" />
-        <option value="$PROJECT_DIR$/src/app/admin/dashboard/internships/internships.styles.css" />
-        <option value="$PROJECT_DIR$/src/app/admin/dashboard/professors/professors.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/admin/dashboard/internships/internships.template.html" />
-        <option value="$PROJECT_DIR$/src/app/admin/dashboard/shared/sidebar.template.html" />
-        <option value="$PROJECT_DIR$/src/app/admin/dashboard/internships/internships.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/admin/routes.ts" />
-        <option value="$PROJECT_DIR$/src/app/admin/dashboard/professors/professors.service.ts" />
-        <option value="$PROJECT_DIR$/src/app/admin/dashboard/shared/navbar/navbar.template.html" />
-        <option value="$PROJECT_DIR$/src/app/admin/dashboard/shared/navbar/navbar.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/admin/dashboard/shared/navbar/index.ts" />
-        <option value="$PROJECT_DIR$/src/app/admin/dashboard/dashboard.component.ts" />
         <option value="$PROJECT_DIR$/src/app/admin/dashboard/dashboard.template.html" />
         <option value="$PROJECT_DIR$/src/app/admin/dashboard/shared/navbar/home-navbar.template.html" />
-        <option value="$PROJECT_DIR$/src/app/common/error_handler.ts" />
         <option value="$PROJECT_DIR$/src/app/admin/login/login.component.ts" />
         <option value="$PROJECT_DIR$/src/app/admin/dashboard/shared/navbar/home-navbar.component.ts" />
         <option value="$PROJECT_DIR$/src/app/admin/adminGuard.ts" />
@@ -232,7 +191,6 @@
         <option value="$PROJECT_DIR$/src/app/home/navbar/navbar.template.html" />
         <option value="$PROJECT_DIR$/src/app/frontend/frontend.component.ts" />
         <option value="$PROJECT_DIR$/src/app/app.routes.ts" />
-        <option value="$PROJECT_DIR$/src/app/frontend/routes.ts" />
         <option value="$PROJECT_DIR$/src/app/frontend/index.ts" />
         <option value="$PROJECT_DIR$/src/app/app.component.ts" />
         <option value="$PROJECT_DIR$/src/app/frontend/home/carousel.template.html" />
@@ -242,8 +200,35 @@
         <option value="$PROJECT_DIR$/src/app/frontend/shared/footer/index.ts" />
         <option value="$PROJECT_DIR$/src/app/frontend/home/home.component.ts" />
         <option value="$PROJECT_DIR$/src/app/frontend/home/home.template.html" />
+        <option value="$PROJECT_DIR$/src/app/admin/dashboard/team_members/team_member.model.ts" />
+        <option value="$PROJECT_DIR$/src/app/admin/dashboard/internships/internship.model.ts" />
+        <option value="$PROJECT_DIR$/src/app/common/services/clubs.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/common/services/internships.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/common/models/index.ts" />
+        <option value="$PROJECT_DIR$/src/app/common/services/team_members.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/common/services/professors.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/admin/dashboard/team_members/index.ts" />
+        <option value="$PROJECT_DIR$/src/app/admin/dashboard/professors/index.ts" />
+        <option value="$PROJECT_DIR$/src/app/admin/dashboard/internships/index.ts" />
+        <option value="$PROJECT_DIR$/src/app/admin/dashboard/clubs/index.ts" />
+        <option value="$PROJECT_DIR$/src/app/admin/routes.ts" />
+        <option value="$PROJECT_DIR$/src/app/admin/dashboard/professors/professors.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/admin/dashboard/internships/internships.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/admin/dashboard/clubs/clubs.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/admin/dashboard/team_members/team_members.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/frontend/team_members/team_members.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/frontend/team_members/team_members.template.html" />
         <option value="$PROJECT_DIR$/src/app/frontend/shared/footer/footer.styles.css" />
+        <option value="$PROJECT_DIR$/src/app/frontend/team_members/index.ts" />
+        <option value="$PROJECT_DIR$/src/app/frontend/clubs/index.ts" />
+        <option value="$PROJECT_DIR$/src/app/frontend/clubs/clubs.template.html" />
+        <option value="$PROJECT_DIR$/src/app/frontend/routes.ts" />
+        <option value="$PROJECT_DIR$/src/app/frontend/shared/navbar/navroute.model.ts" />
+        <option value="$PROJECT_DIR$/src/app/frontend/shared/navbar/navbar.component.ts" />
         <option value="$PROJECT_DIR$/src/app/frontend/shared/navbar/navbar.template.html" />
+        <option value="$PROJECT_DIR$/src/app/frontend/internships/internships.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/frontend/clubs/clubs.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/common/error_handler.ts" />
       </list>
     </option>
   </component>
@@ -405,11 +390,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="shared" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="navbar" />
+              <option name="myItemId" value="internships" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -435,7 +416,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
+              <option name="myItemId" value="clubs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sg_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sg_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -484,6 +487,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sg_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sg_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="team_members" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -517,6 +550,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sg_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sg_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="internships" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -533,9 +596,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/common/models" />
+      <recent name="$PROJECT_DIR$/src/app/common/services" />
+      <recent name="$PROJECT_DIR$/src/app/common" />
       <recent name="$PROJECT_DIR$/src/app/frontend/shared" />
       <recent name="$PROJECT_DIR$/src/app/frontend/home" />
-      <recent name="$PROJECT_DIR$/src/app/admin/dashboard/shared/sidebar" />
     </key>
   </component>
   <component name="RunManager">
@@ -607,12 +672,12 @@
       <workItem from="1471552499515" duration="919000" />
       <workItem from="1471554638620" duration="113000" />
       <workItem from="1471555875768" duration="32343000" />
-      <workItem from="1471870369034" duration="7788000" />
+      <workItem from="1471870369034" duration="12896000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53938000" />
+    <option name="totallyTimeSpent" value="59046000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -643,316 +708,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="14" />
+      <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/internships/internships.styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/professors/professors.template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/internships/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="52" selection-start-line="0" selection-start-column="52" selection-end-line="0" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/internships/internships.template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/shared/sidebar/sidebar.template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/professors/professors.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#68#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/internships/internship.model.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/internships/internships.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-          <folding>
-            <element signature="e#1#67#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/common/listing.model.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/common/queryconstructor.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/shared/navbar">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/shared/sidebar/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/shared/navbar/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/dashboard.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#59#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/common/error_handler.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/shared/sidebar/sidebar.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#61#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/shared/navbar/home-navbar.template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/login/login.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/shared/navbar/home-navbar.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/adminGuard.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding>
-            <element signature="e#44#87#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/user.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/internships/internships.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/frontend/shared/navbar/navbar.styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/dashboard.styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/dashboard.template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/frontend/shared/title/title.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/frontend/x-large/x-large.directive.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/frontend/x-large/x-large.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/frontend/x-large/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/detail/routes.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/routes.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="26" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/admin.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="20" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/frontend/frontend.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.routes.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-          <folding>
-            <element signature="e#1#48#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/frontend/shared/navbar/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/frontend/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -980,7 +744,7 @@
         <state relative-caret-position="180">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#slide#0;n#carousel#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#slide#0;n#carousel#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -990,16 +754,8 @@
         <state relative-caret-position="405">
           <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
           <folding>
-            <element signature="e#44#84#0" expanded="true" />
+            <element signature="e#44#84#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/frontend/shared/navbar/navbar.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1019,31 +775,202 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/frontend/routes.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#44#89#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/frontend/home/home.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="549">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
-            <element signature="e#0#48#0" expanded="true" />
+            <element signature="e#0#48#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/frontend/home/home.template.html">
+    <entry file="file://$PROJECT_DIR$/src/app/common/models/professor.model.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/common/queryconstructor.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/common/services/team_members.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#1#52#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/common/services/professors.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding>
+            <element signature="e#1#52#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/common/services/internships.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+          <folding>
+            <element signature="e#1#50#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/internships/internships.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+          <folding>
+            <element signature="e#1#67#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/dashboard.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/team_members/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/internships/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/clubs/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/admin/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/common/services/clubs.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/clubs/clubs.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#44#111#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/team_members/team_members.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+          <folding>
+            <element signature="e#1#68#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/professors/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/professors/professors.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#68#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/admin/routes.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#45#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.resolver.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#87#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.routes.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#1#48#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1055,26 +982,178 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/common/models/internship.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/common/models/team_member.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/frontend/home/home.template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/frontend/clubs/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="24" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/frontend/team_members/team_members.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/frontend/team_members/team_members.template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/frontend/shared/footer/footer.styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+        <state relative-caret-position="120">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/frontend/team_members/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/frontend/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/common/models/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/common/models/club.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/frontend/routes.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/frontend/shared/navbar/navbar.styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/frontend/shared/navbar/navroute.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/frontend/shared/navbar/navbar.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/frontend/shared/navbar/navbar.template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+        <state relative-caret-position="165">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/dashboard/professors/professors.service.ts">
+    <entry file="file://$PROJECT_DIR$/src/app/frontend/clubs/clubs.template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        <state relative-caret-position="270">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/frontend/clubs/clubs.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/frontend/internships/internships.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/common/error_handler.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
           <folding />
         </state>
       </provider>

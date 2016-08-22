@@ -1,1 +1,1 @@
-export { Clubs }  from './clubs.component'
+export { AdminClubs }  from './clubs.component'

@@ -1,1 +1,1 @@
-export {Internships} from './internships.component';
+export {AdminInternships} from './internships.component';

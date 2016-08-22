@@ -1,0 +1,25 @@
+<navbar></navbar>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="display-4">Team members</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card-deck-wrapper">
+            <div class="card-deck">
+                <div class="card" *ngFor="let member of listing.collection">
+                    <img class="card-img-top" src="{{member.photo}}" alt="{{member.name}}">
+                    <div class="card-block">
+                        <h4 class="card-title">{{member.name}}</h4>
+                        <p class="card-text"><small class="text-muted">{{member.title}}</small></p>
+                        <p class="card-text">{{member.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer></footer>

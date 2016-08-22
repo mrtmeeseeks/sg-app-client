@@ -1,1 +1,1 @@
-export { Professors}  from './professors.component'
+export { AdminProfessors}  from './professors.component'
