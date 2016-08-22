@@ -23,7 +23,7 @@ export class InternshipsService {
                 listing.count = body.Count;
 
                 return listing;
-            } )å
+            } )
             .catch(this.handleError);
     }
 

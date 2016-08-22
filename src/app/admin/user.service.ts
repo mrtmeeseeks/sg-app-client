@@ -12,7 +12,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class UserService {
-    private loggedIn = false;
+
 
 
     constructor(private http:Http , @Inject('ApiEndpoint') private api: string) {
@@ -37,7 +37,8 @@ export class UserService {
                 let body = res.json();
                 localStorage.setItem('auth_token', body.auth_token);
                 localStorage.setItem('role', body.role);
-                this.loggedIn = true;
+
+
                 return body;
             })
             .catch(this.handleError);
@@ -46,11 +47,12 @@ export class UserService {
     logout() {
         localStorage.removeItem('auth_token');
         localStorage.removeItem('role');
-        this.loggedIn = false;
     }
 
-    isLoggedIn() {
-        return this.loggedIn;
+    isLoggedIn():boolean {
+        let result = localStorage.getItem('auth_token') ? true : false;
+        return result;
+
     }
 
 

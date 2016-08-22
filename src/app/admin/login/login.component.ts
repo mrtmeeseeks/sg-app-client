@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import {Component, ViewEncapsulation, OnInit} from '@angular/core';
 import {FormGroup, AbstractControl, FormBuilder, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import {UserService} from "../user.service";
@@ -9,14 +9,14 @@ import {UserService} from "../user.service";
     directives: [],
     template: require('./login.html'),
 })
-export class Login {
+export class Login implements OnInit{
 
     public form:FormGroup;
     public email:AbstractControl;
     public password:AbstractControl;
     public submitted:boolean = false;
 
-    constructor(fb:FormBuilder,  private userService: UserService, private router: Router) {
+    constructor(fb:FormBuilder,  private _userService: UserService, private _router: Router) {
         this.form = fb.group({
             'email': ['', Validators.compose([Validators.required, Validators.minLength(4)])],
             'password': ['', Validators.compose([Validators.required, Validators.minLength(4)])]
@@ -26,13 +26,18 @@ export class Login {
         this.password = this.form.controls['password'];
     }
 
+    ngOnInit() {
+        if(this._userService.isLoggedIn()) {
+            this._router.navigate(['admin/dashboard/professors']);
+        }
+    }
+
     public onSubmit(values):void {
         this.submitted = true;
 
         if (this.form.valid) {
-            this.userService.login(values.email, values.password).then((result) => {
-                console.log('asd');
-                this.router.navigate(['admin/dashboard/professors']);
+            this._userService.login(values.email, values.password).then((result) => {
+                this._router.navigate(['admin/dashboard/professors']);
             }, (error) => {
                 //todo handle login failure
             });

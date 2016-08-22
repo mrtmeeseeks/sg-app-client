@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
-import {AlertComponent, DATEPICKER_DIRECTIVES} from 'ng2-bootstrap/ng2-bootstrap';
-import { AppState } from '../app.service';
-import {HomeNavbar} from './navbar/navbar.component'
-import { Title } from './title';
-import { XLarge } from './x-large';
+import {Component, OnInit} from '@angular/core';
+import {AlertComponent} from 'ng2-bootstrap/ng2-bootstrap';
+import { AppState } from '../../app.service';
+import { HomeNavbar } from '../shared/navbar'
+import { Title } from "../shared/title/title.service";
+import { Carousel } from  "./carousel.component";
+import {HomeFooter} from "../shared/footer/footer.component";
+
 
 
 @Component({
@@ -19,9 +21,9 @@ import { XLarge } from './x-large';
   // Doing so will allow Angular to attach our behavior to an element
   directives: [
     HomeNavbar,
+    HomeFooter,
     AlertComponent,
-    DATEPICKER_DIRECTIVES,
-    XLarge
+    Carousel
   ],
   // We need to tell Angular's compiler which custom pipes are in our template.
   pipes: [ ],
@@ -30,7 +32,7 @@ import { XLarge } from './x-large';
   // Every Angular template is first compiled by the browser before Angular runs it's compiler
   templateUrl: './home.template.html'
 })
-export class Home {
+export class Home implements OnInit{
   // Set our default values
   date: Date = new Date();
   localState = { value: '' };
@@ -44,10 +46,6 @@ export class Home {
     // this.title.getData().subscribe(data => this.data = data);
   }
 
-  submitState(value) {
-    console.log('submitState', value);
-    this.appState.set('value', value);
-    this.localState.value = '';
-  }
+
 
 }

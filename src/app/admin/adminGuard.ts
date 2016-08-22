@@ -12,15 +12,13 @@ export class AdminGuard implements CanActivate {
     constructor(private router: Router, private user: UserService) {}
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | boolean {
-        return true;
-        // if(this.user.isLoggedIn()) {
-        //     console.log('yup');
-        //     //todo check for role
-        //     return true;
-        // } else {
-        //     this.router.navigate(['/admin/login']);
-        //     return false;
-        // }
+        if(this.user.isLoggedIn()) {
+            console.log('yes');
+            return true;
+        } else {
+            this.router.navigate(['/admin/login']);
+            return false;
+        }
     }
 }
 

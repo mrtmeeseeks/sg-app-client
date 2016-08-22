@@ -15,17 +15,7 @@ import { AppState } from './app.service';
   styleUrls: [
     './app.style.css'
   ],
-  template: `
-
-
-    <div class="container-fluid">
-      <router-outlet></router-outlet>
-    </div>
-
-    <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
-
-  
-  `
+  template: `<router-outlet></router-outlet>`
 })
 export class App {
   angularclassLogo = 'assets/img/angularclass-avatar.png';
