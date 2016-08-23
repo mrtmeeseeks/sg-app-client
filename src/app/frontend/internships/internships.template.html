@@ -1,0 +1,22 @@
+<navbar></navbar>
+<div class="container">
+
+    <h1 class="display-4">Internships</h1>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="card-deck-wrapper">
+                <div class="card-deck">
+                    <div class="card" *ngFor="let internship of listing.collection">
+                        <img class="card-img-top" src="{{internship.image}}">
+                        <div class="card-block">
+                            <h4 class="card-title">{{internship.description}}</h4>
+                            <a href="{{internship.link}}" target="_blank" class="btn btn-primary">More Information</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+    <pagination [totalItems]="listing.count" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>
+</div>
+<footer></footer>

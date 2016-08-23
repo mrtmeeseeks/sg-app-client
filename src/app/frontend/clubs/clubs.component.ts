@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 
 import {Listing} from "../../common/listing.model";
 import {HomeFooter} from "../shared/footer/footer.component";
@@ -11,7 +11,9 @@ import {ClubsService} from "../../common/services/clubs.service";
     selector: 'clubs',
     providers: [ClubsService],
     directives: [HomeFooter, HomeNavbar],
-    templateUrl: './clubs.template.html'
+    templateUrl: './clubs.template.html',
+    styleUrls: ['./clubs.styles.css'],
+    encapsulation: ViewEncapsulation.Emulated
 
 })
 

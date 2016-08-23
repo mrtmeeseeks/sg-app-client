@@ -1,0 +1,12 @@
+.card-img {
+    width: 200px;
+    height: auto;
+}
+
+/*.card {*/
+    /*max-width: 18%;*/
+/*}*/
+
+.card-img-overlay {
+    background: rgba(25,25,25 ,0.4)
+}

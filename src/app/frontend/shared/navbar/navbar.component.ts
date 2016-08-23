@@ -14,7 +14,7 @@ export class HomeNavbar {
         this.navbarRoutes = [
             {
                 name: 'Home',
-                url: '/'
+                url: '/home'
             },
             {
                 name: 'Members',

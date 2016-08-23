@@ -6,19 +6,18 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-12">
-            <div class="card card-inverse" *ngFor="let club of listing.collection">
-                <img class="card-img" src="{{club.logo}}" alt="{{club.name}}">
-                <div class="card-img-overlay">
-                    <h4 class="card-title">{{club.name}}</h4>
-                    <p class="card-text">President:&nbsp;{{club.president}}</p>
+        <div class="card-deck-wrapper">
+            <div class="card-deck">
+                <div class="card card-inverse" *ngFor="let club of listing.collection">
+                    <img class="card-img img-fluid" src="{{club.logo}}" alt="{{club.name}}">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">{{club.name}}</h4>
+                        <p class="card-text">President:&nbsp;{{club.president}}</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
 </div>
 
 <footer></footer>
