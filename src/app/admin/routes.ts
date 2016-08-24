@@ -7,6 +7,7 @@ import {AdminProfessors} from "./dashboard/professors/professors.component";
 import {AdminClubs} from "./dashboard/clubs/clubs.component"
 import {AdminTeamMembers} from "./dashboard/team_members/team_members.component";
 import {AdminInternships} from "./dashboard/internships/internships.component";
+import {AdminProfessorDetail} from "./dashboard/professors/professor-detail.component";
 // async components must be named routes for WebpackAsyncRoute
 export const AdminRoutes:RouterConfig = [
     {
@@ -15,7 +16,9 @@ export const AdminRoutes:RouterConfig = [
             {path: 'login', component: Login },
             {path: 'dashboard', component: Dashboard , canActivate: [AdminGuard],
                 children: [
-                    {path:'professors' , component: AdminProfessors },
+                    {path: '', redirectTo: 'professors', pathMatch: 'full' },
+                    {path: 'professors' , component: AdminProfessors },
+                    {path: 'professor/:id' , component: AdminProfessorDetail},
                     {path: 'clubs', component: AdminClubs},
                     {path: 'team_members' , component: AdminTeamMembers},
                     {path: 'internships', component: AdminInternships}

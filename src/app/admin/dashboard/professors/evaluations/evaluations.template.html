@@ -1,0 +1,18 @@
+<h2>Evaluations</h2>
+<span *ngIf="evaluations && evaluations.length == 0" class="text-lg-center text-muted">No evaluations found.</span>
+<div class="list-group" >
+    <div class="list-group-item list-group-item-action" [class.active]="evaluation == selectedEvaluation" (click)="selectedEvaluation = evaluation" *ngFor="let evaluation of evaluations">
+        <p class="list-group-item-text">{{evaluation.content}}</p>
+        <span *ngIf="evaluation == selectedEvaluation">
+           <hr>
+           <div class="row" >
+            <div class="col-xs-12">
+                <button class="btn btn-danger btn-sm">Delete</button>
+            </div>
+        </div>
+
+        </span>
+
+
+    </div>
+</div>

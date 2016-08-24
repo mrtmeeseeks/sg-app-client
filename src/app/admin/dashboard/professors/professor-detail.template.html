@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-xs-3">
+        <a routerLink="/admin/dashboard/professors" class="btn btn-primray ">Back</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3 col-xs-12">
+       <img class="img-circle img-fluid" src="{{professor.photo}}">
+       <h1>{{professor.name}}</h1>
+       <h5><span class="text-muted">{{professor.department}}</span></h5>
+    </div>
+    <div class="col-md-9 col-xs-12">
+        <evaluations [evaluations]="professor.evaluations"></evaluations>
+    </div>
+</div>

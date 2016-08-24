@@ -4,8 +4,8 @@
  <div class="list-group">
 
      <div class="list-group-item" *ngFor="let professor of listing.collection">
-         <div class="media"  >
-             <a class="media-left" href="#">
+         <div class="media" routerLink="../professor/{{professor.id}}"  >
+             <a class="media-left" >
                  <img class=" img-circle media-object media-img" src="{{professor.photo}}" alt="{{professor.name}}">
              </a>
              <div class="media-body">

@@ -1,0 +1,1 @@
+export { AdminEvaluations } from 'evaluations.component'

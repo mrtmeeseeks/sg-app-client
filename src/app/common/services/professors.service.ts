@@ -29,8 +29,8 @@ export class ProfessorsService {
             .catch(this.handleError);
     }
 
-    get(professor: Professor) {
-        return this.http.get(this.professorsUrl + `${professor.id}`)
+    get(id:number):Professor {
+        return this.http.get(this.professorsUrl + `/${id}`)
             .toPromise()
             .then(res => res.json() as Professor)
             .catch(this.handleError);
