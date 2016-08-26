@@ -6,7 +6,6 @@ import {TeamMember} from "../../../common/models/team_member.model";
 import {TeamMembersService} from "../../../common/services/team_members.service";
 
 @Component({
-    selector: 'clubs',
     template:require('./team_members.template.html'),
     directives: [PAGINATION_DIRECTIVES],
     providers: [TeamMembersService],

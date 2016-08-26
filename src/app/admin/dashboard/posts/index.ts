@@ -1,0 +1,1 @@
+export {AdminPosts} from 'posts.component';

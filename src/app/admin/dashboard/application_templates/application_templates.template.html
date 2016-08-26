@@ -1,0 +1,11 @@
+<h1>Application templates</h1>
+
+
+<div class="list-group">
+    <div class="list-group-item" routerLink="../application_template/{{application.id}}" *ngFor="let application of listing.collection">
+      <h3>{{application.name}}</h3>
+      <p>{{application.description}}</p>
+    </div>
+</div>
+<pagination [totalItems]="listing.count" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>
+

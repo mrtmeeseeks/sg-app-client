@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-xs-3">
-        <a routerLink="/admin/dashboard/professors" class="btn btn-primray ">Back</a>
+        <a routerLink="../../professors" class="btn btn-primray ">Back</a>
     </div>
 </div>
 <div class="row">
@@ -10,6 +10,6 @@
        <h5><span class="text-muted">{{professor.department}}</span></h5>
     </div>
     <div class="col-md-9 col-xs-12">
-        <evaluations [evaluations]="professor.evaluations"></evaluations>
+        <admin-evaluations [professor_id]="professor.id"></admin-evaluations>
     </div>
 </div>

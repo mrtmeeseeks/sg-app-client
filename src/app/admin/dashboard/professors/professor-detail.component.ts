@@ -5,7 +5,6 @@ import {ProfessorsService} from "../../../common/services/professors.service";
 import {AdminEvaluations} from "./evaluations/evaluations.component";
 
 @Component({
-    selector: 'professors',
     encapsulation: ViewEncapsulation.None,
     providers: [ProfessorsService],
     directives: [AdminEvaluations],
@@ -13,11 +12,10 @@ import {AdminEvaluations} from "./evaluations/evaluations.component";
     template: require('./professor-detail.template.html'),
 })
 export class AdminProfessorDetail implements OnInit, OnDestroy{
-    public currentPage:number = 1;
-    sub: any;
+    public sub: any;
     professor:Professor;
 
-    constructor(private _service:ProfessorsService, private _route:ActivatedRoute) {
+    constructor(private _profService:ProfessorsService, private _route:ActivatedRoute) {
         this.professor = new Professor();
     }
 
@@ -37,7 +35,7 @@ export class AdminProfessorDetail implements OnInit, OnDestroy{
  
 
     private loadProfessor(id:number) {
-        this._service.get(id).then(professor => this.professor = professor);
+        this._profService.get(id).then(professor => this.professor = professor);
     }
 
 

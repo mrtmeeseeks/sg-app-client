@@ -1,0 +1,26 @@
+<h1>Post</h1>
+
+<div class="row">
+    <div class="col-md-2">
+        <a routerLink="../newpost" class="btn btn-success">New Post</a>
+    </div>
+</div>
+<div class="list-group">
+
+    <div class="list-group-item" *ngFor="let post of listing.collection">
+        <div class="media" routerLink="../post/{{post.id}}"  >
+            <a class="media-left" >
+                <img class=" img-circle media-object media-img" src="{{post.photo}}" alt="{{post.name}}">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">{{post.name}}</h4>
+                <small class="text-muted">
+                    {{post.department}}
+                </small>
+                {{post.description}}
+            </div>
+        </div>
+    </div>
+
+</div>
+<pagination [totalItems]="listing.count" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>

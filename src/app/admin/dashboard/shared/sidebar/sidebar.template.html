@@ -1,14 +1,4 @@
-
-
 <ul class="nav nav-sidebar">
-
-    <li routerLinkActive="active"> <a routerLink="/admin/dashboard/professors">Professors</a></li>
-
-    <li routerLinkActive="active"> <a routerLink="/admin/dashboard/clubs">Clubs</a></li>
-    <li routerLinkActive="active"> <a routerLink="/admin/dashboard/team_members">Team Members</a></li>
-    <li routerLinkActive="active"> <a routerLink="/admin/dashboard/internships">Internships</a></li>
-
-
-
+     <li routerLinkActive="active" *ngFor="let route of sidebarRoutes"> <a routerLink="{{route.url}}">{{route.name}}</a></li>
 </ul>
 

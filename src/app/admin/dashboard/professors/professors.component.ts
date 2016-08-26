@@ -5,7 +5,6 @@ import {Professor} from "../../../common/models/professor.model";
 import {ProfessorsService} from "../../../common/services/professors.service";
 
 @Component({
-    selector: 'professors',
     encapsulation: ViewEncapsulation.None,
     directives: [PAGINATION_DIRECTIVES],
     providers: [ProfessorsService],

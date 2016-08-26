@@ -1,0 +1,1 @@
+export {AdminApplicationSubmissions} from 'application_submissions.component';

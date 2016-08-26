@@ -1,5 +1,5 @@
-export class Club {
-    id:number;
+import {BaseModel} from "./base_model";
+export class Club extends BaseModel {
     name:string;
     professor_id:string;
     president:string;
@@ -7,29 +7,3 @@ export class Club {
 }
 
 
-// name
-// optional
-// Name of the club
-//
-// Validations:
-//
-//     Must be String
-//
-// professor_id
-// optional
-// Professor_id of the club
-//
-// Validations:
-//
-//     Must be Fixnum
-//
-// president
-// optional
-// President of the club
-//
-// Validations:
-//
-//     Must be String
-//
-// logo
-// optional

@@ -5,6 +5,7 @@ import { HomeNavbar } from '../shared/navbar'
 import { Title } from "../shared/title/title.service";
 import { Carousel } from  "./carousel.component";
 import {HomeFooter} from "../shared/footer/footer.component";
+import {FrontNews} from "./news.component";
 
 
 
@@ -23,6 +24,7 @@ import {HomeFooter} from "../shared/footer/footer.component";
     HomeNavbar,
     HomeFooter,
     AlertComponent,
+    FrontNews,
     Carousel
   ],
   // We need to tell Angular's compiler which custom pipes are in our template.

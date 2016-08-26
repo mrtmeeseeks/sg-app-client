@@ -5,6 +5,7 @@ import { Listing } from '../listing.model';
 import {QueryConstructor} from '../queryconstructor';
 import 'rxjs/add/operator/toPromise';
 import {Professor} from "../models/professor.model";
+import {Evaluation} from "../models/evaluation.model";
 
 @Injectable()
 export class ProfessorsService {
@@ -29,12 +30,14 @@ export class ProfessorsService {
             .catch(this.handleError);
     }
 
-    get(id:number):Professor {
+    get(id:number) {
         return this.http.get(this.professorsUrl + `/${id}`)
             .toPromise()
             .then(res => res.json() as Professor)
             .catch(this.handleError);
     }
+    
+
 
 
 

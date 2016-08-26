@@ -1,0 +1,23 @@
+<h2>Submissions</h2>
+<span *ngIf="listing.collection && listing.collection.length == 0" class="text-lg-center text-muted">No submissions found.</span>
+<div class="list-group" >
+    <div class="list-group-item list-group-item-action" [class.active]="submission == selectedSubmission" (click)="selectedSubmission = submission" *ngFor="let submission of listing.collection">
+        <figure class="figure">
+            <a href="{{submission.document}}">Document URL</a>
+        </figure>
+        <p class="list-group-item-text">{{submission.notes}}</p>
+        <span *ngIf="submission == selectedSubmission">
+           <hr>
+           <div class="row" >
+                <div class="col-xs-12">
+                    <button class="btn btn-danger btn-sm">Delete</button>
+                </div>
+           </div>
+        </span>
+
+
+    </div>
+</div>
+<span *ngIf="listing.collection && listing.collection.length > 0">
+   <!-- <pagination [totalItems]="listing.count" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination> -->
+</span>

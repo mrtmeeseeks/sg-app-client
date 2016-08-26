@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-xs-3">
+        <a routerLink="../../applications" class="btn btn-primray ">Back</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>{{application_template.name}}</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <p>{{application_template.description}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <figure class="figure">
+           <a href="{{application_template.document}}">Document URL</a>
+        </figure>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+     <admin-application-submissions [template_id]="application_template.id"></admin-application-submissions>
+    </div>
+</div>

@@ -4,5 +4,7 @@ export class Professor {
     name: string;
     department: string;
     photo: string;
-    evaluations: Array<Evaluation>
+    evaluations: Array<Evaluation>;
+    created_at:Date;
+    updated_at:Date;
 }

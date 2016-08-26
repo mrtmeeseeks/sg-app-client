@@ -27,12 +27,11 @@ export class HomeNavbar {
             {
                 name: 'Internships',
                 url: '/internships'
+            },
+            {
+                name: 'Applications',
+                url: '/applications'
             }
         ]
-
-
-
-
-        
     }
 }

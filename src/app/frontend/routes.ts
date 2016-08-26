@@ -6,6 +6,7 @@ import {Home} from "./home/home.component";
 import {FrontTeamMembers} from "./team_members/team_members.component";
 import {FrontClubs} from "./clubs/clubs.component";
 import {FrontInternships} from "./internships/internships.component";
+import {FrontApplicationTemplates} from "./applications/application_templates.component";
 
 
 export const FrontEndRoutes:RouterConfig = [
@@ -13,5 +14,7 @@ export const FrontEndRoutes:RouterConfig = [
     { path: 'home',  component: Home },
     { path: 'members' , component: FrontTeamMembers},
     { path: 'clubs' , component: FrontClubs},
-    { path: 'internships' , component: FrontInternships}
+    { path: 'internships' , component: FrontInternships},
+    { path: 'applications' , component: FrontApplicationTemplates }
+   
 ];

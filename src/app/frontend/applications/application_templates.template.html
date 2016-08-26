@@ -1,0 +1,25 @@
+<navbar></navbar>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="display-4">Applications</h1>
+        </div>
+    </div>
+    <new-application-submission [template]="selectedTemplate"></new-application-submission>
+    <div class="row">
+        <div class="card-deck-wrapper">
+            <div class="card-deck">
+                <div class="card" *ngFor="let application_template of listing.collection">
+                    <h3 class="card-header">{{application_template.name}}</h3>
+                    <div class="card-block">
+                        <!--<h4 class="card-title">{{application_template.}}</h4>-->
+                        <p class="card-text">{{application_template.description}}</p>
+                        <a (click)="selectedTemplate = application_template" class="btn btn-primary">Apply</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer></footer>
