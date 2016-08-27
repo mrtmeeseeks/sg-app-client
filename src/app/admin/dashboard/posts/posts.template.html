@@ -8,16 +8,14 @@
 <div class="list-group">
 
     <div class="list-group-item" *ngFor="let post of listing.collection">
-        <div class="media" routerLink="../post/{{post.id}}"  >
-            <a class="media-left" >
-                <img class=" img-circle media-object media-img" src="{{post.photo}}" alt="{{post.name}}">
-            </a>
+        <div class="media"  routerLink="../post/{{post.id}}" >
+            <img class="img-circle media-object media-img" src="{{post.image}}" alt="{{post.title}}">
             <div class="media-body">
-                <h4 class="media-heading">{{post.name}}</h4>
+                <h4 class="media-heading">{{post.title}}</h4>
                 <small class="text-muted">
-                    {{post.department}}
+                    {{post.created_at}}
                 </small>
-                {{post.description}}
+
             </div>
         </div>
     </div>

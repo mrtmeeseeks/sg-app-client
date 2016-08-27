@@ -10,6 +10,7 @@ import {Post} from "../../../common/models/post.model";
     directives: [PAGINATION_DIRECTIVES],
     providers: [PostsService],
     template: require('./posts.template.html'),
+    styleUrls: ['./posts.styles.css']
 })
 export class AdminPosts implements OnInit{
     listing: Listing<Post>;

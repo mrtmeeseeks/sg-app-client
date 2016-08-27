@@ -25,24 +25,7 @@ export class ApplicationSubmissionsService {
     }
 
 
-    // makeSubmission(file:File, fileName:string, templateId:number) {
-    //         return new Promise((resolve, reject) => {
-    //             var formData: any = new FormData();
-    //             var xhr = new XMLHttpRequest();
-    //             formData.append("application_submission[document]", file, fileName);
-    //             xhr.onreadystatechange = function () {
-    //                 if (xhr.readyState == 4) {
-    //                     if (xhr.status == 200) {
-    //                         resolve(JSON.parse(xhr.response));
-    //                     } else {
-    //                         reject(xhr.response);
-    //                     }
-    //                 }
-    //             };
-    //             xhr.open("POST", this.api + `/application_templates/${templateId}/application_submissions`, true);
-    //             xhr.send(formData);
-    //         });
-    //     }
+
 
 
 }

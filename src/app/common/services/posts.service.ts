@@ -4,18 +4,18 @@
 
 
 import { Injectable, Inject } from '@angular/core';
-import { Http } from '@angular/http';
+import {Http, Headers} from '@angular/http';
 import { Listing } from '../listing.model'
 import { QueryConstructor} from '../queryconstructor'
-import 'rxjs/add/operator/toPromise';
 import {Post} from "../models/post.model";
-
+import {Observable} from 'rxjs/Rx';
 
 @Injectable()
 export class PostsService {
-
+    private authToken = localStorage.getItem('auth_token');
     private postsUrl = this.api + '/posts' ;
     constructor(private http:Http, @Inject('ApiEndpoint') private api: string) {
+  
     }
 
     query(page:number, itemsPerPage: number) {
@@ -39,6 +39,39 @@ export class PostsService {
             .then(res => res.json())
             .catch(this.handleError);
     }
+
+
+    save(post:Post , file:File, fileName:string): Observable  {
+
+        return Observable.create(observer =>  {
+                    let formData: any = new FormData();
+                    let xhr:XMLHttpRequest = new XMLHttpRequest();
+                    formData.append("post[image]", file, fileName);
+                    formData.append("post[title]", post.title);
+                    formData.append("post[content]", post.content);
+                    formData.append("post[featured]", post.featured);
+                    formData.append("post[styles]" , post.styles);
+                    xhr.onreadystatechange = () => {
+                        if (xhr.readyState === 4) {
+                            if (xhr.status === 200 || xhr.status === 201) {
+                                observer.next(JSON.parse(xhr.response));
+                                observer.complete();
+                            } else {
+                                observer.error(xhr.response);
+                            }
+                        }
+                    };
+                    // xhr.upload.onprogress = (event) => {
+                    //     this.progress = Math.round(event.loaded / event.total * 100);
+                    //
+                    //     this.progressObserver.next(this.progress);
+                    // };
+
+                    xhr.open("POST", this.postsUrl, true);
+                    xhr.setRequestHeader('Authorization', this.authToken);
+                    xhr.send(formData);
+                });
+            }
 
 
 }
