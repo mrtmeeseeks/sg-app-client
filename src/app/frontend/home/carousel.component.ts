@@ -1,37 +1,38 @@
 /**
  * Created by hgeorgiev on 8/22/16.
  */
-import {Component} from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {CORE_DIRECTIVES} from '@angular/common';
 import {CAROUSEL_DIRECTIVES} from "ng2-bootstrap/ng2-bootstrap";
+import {PostsService} from "../../common/services/posts.service";
+import {Post} from "../../common/models/post.model";
 
 
 
 
 @Component({
     selector: 'carousel',
+    encapsulation: ViewEncapsulation.Emulated,
     directives: [CAROUSEL_DIRECTIVES, CORE_DIRECTIVES, ],
-    templateUrl: './carousel.template.html'
+    templateUrl: './carousel.template.html',
+    styleUrls: ['./carousel.styles.css']
 })
-export class Carousel {
+export class Carousel implements OnInit{
     public myInterval:number = 5000;
     public noWrapSlides:boolean = false;
-    public slides:Array<any> = [];
+    public slides:Array<Post> = [];
 
-    public constructor() {
-        for (let i = 0; i < 4; i++) {
-            this.addSlide();
-        }
+    public constructor(private _post:PostsService) {
+
+    }
+    
+    ngOnInit() {
+        this._post.getFeatured(1,5).then(result => {
+            this.slides = result.Items;
+        })
     }
 
-    public addSlide():void {
-        let newWidth = 2000 + this.slides.length + 1;
-        this.slides.push({
-            image: `//placekitten.com/${newWidth}/400`,
-            text: `${['More', 'Extra', 'Lots of', 'Surplus'][this.slides.length % 4]}
-      ${['Cats', 'Kittys', 'Felines', 'Cutes'][this.slides.length % 4]}`
-        });
-    }
+
 
 
 

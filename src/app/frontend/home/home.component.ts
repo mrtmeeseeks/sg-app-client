@@ -6,6 +6,7 @@ import { Title } from "../shared/title/title.service";
 import { Carousel } from  "./carousel.component";
 import {HomeFooter} from "../shared/footer/footer.component";
 import {FrontNews} from "./news.component";
+import {PostsService} from "../../common/services/posts.service";
 
 
 
@@ -16,7 +17,8 @@ import {FrontNews} from "./news.component";
   selector: 'home',  // <home></home>
   // We need to tell Angular's Dependency Injection which providers are in our app.
   providers: [
-    Title
+    Title,
+    PostsService
   ],
   // We need to tell Angular's compiler which directives are in our template.
   // Doing so will allow Angular to attach our behavior to an element

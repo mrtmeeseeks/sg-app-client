@@ -18,6 +18,7 @@ export class PostsService {
   
     }
 
+    //get all POSTS
     query(page:number, itemsPerPage: number) {
         return this.http.get(this.postsUrl, {search:  QueryConstructor(page, itemsPerPage)})
             .toPromise()
@@ -32,7 +33,47 @@ export class PostsService {
             } )
             .catch(this.handleError);
     }
+    //get Featured
+    getFeatured(page:number, itemsPerPage: number) {
+        return this.http.get(this.postsUrl + '/featured', {search:  QueryConstructor(page, itemsPerPage)})
+            .toPromise()
+            .then(res => {
+                // let wallpapers = new Array<Wallpaper>();
+                //
+                // body.data.children.forEach(post => {
+                //     if (post.data.post_hint === 'image') {
+                //         let item = new Wallpaper();
+                //
+                //         item.url = post.data.url;
+                //         item.title = post.data.title;
+                //
+                //         let previewImages = post.data.preview.images;
+                //         let resolutions = post.data.preview.images[0].resolutions;
+                //
+                //         let previewImage = resolutions.filter(m => m.width === 960)[0];
+                //
+                //         item.previewUrl = previewImage ? previewImage.url : item.url;
+                //
+                //         wallpapers.push(item);
+                //     }
+                // });
+                return res.json();
+            })
+            .catch(this.handleError);
+    }
 
+    getRegular(page:number, itemsPerPage: number):Observable {
+        return this.http.get(this.postsUrl + '/regular', {search:  QueryConstructor(page, itemsPerPage)})
+            .map(res => res.json())
+    }
+
+
+
+
+
+
+
+    //get POST
     get(id:number) {
         return this.http.get(this.postsUrl + `/${id}`)
             .toPromise()
@@ -41,6 +82,7 @@ export class PostsService {
     }
 
 
+    //post POST
     save(post:Post , file:File, fileName:string): Observable  {
 
         return Observable.create(observer =>  {
@@ -61,11 +103,7 @@ export class PostsService {
                             }
                         }
                     };
-                    // xhr.upload.onprogress = (event) => {
-                    //     this.progress = Math.round(event.loaded / event.total * 100);
-                    //
-                    //     this.progressObserver.next(this.progress);
-                    // };
+
 
                     xhr.open("POST", this.postsUrl, true);
                     xhr.setRequestHeader('Authorization', this.authToken);

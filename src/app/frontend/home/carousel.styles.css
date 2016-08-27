@@ -1,0 +1,10 @@
+.carousel .item {
+    height: 300px;
+}
+
+.item img {
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 300px;
+}
