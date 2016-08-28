@@ -11,8 +11,9 @@ import {AdminProfessorDetail} from "./dashboard/professors/professor-detail.comp
 import {AdminApplicationTemplates} from "./dashboard/application_templates/application_templates.component";
 import {AdminApplicationTemplateDetail} from "./dashboard/application_templates/application_template-detail.component";
 import {AdminPosts} from "./dashboard/posts/posts.component";
-import {AdminPostDetail} from "./dashboard/posts/post-detail.component";
-import {NewPost} from "./dashboard/posts/new-post.component";
+import {PostComponent} from "./dashboard/posts/post.component";
+
+
 // async components must be named routes for WebpackAsyncRoute
 export const AdminRoutes:RouterConfig = [
     {
@@ -30,8 +31,8 @@ export const AdminRoutes:RouterConfig = [
                     {path: 'applications' , component: AdminApplicationTemplates},
                     {path: 'application_template/:id' , component: AdminApplicationTemplateDetail},
                     {path: 'posts', component: AdminPosts},
-                    {path: 'post/:id', component: AdminPostDetail},
-                    {path: 'newpost', component: NewPost}
+                    {path: 'post/:id', component: PostComponent},
+                    {path: 'newpost', component: PostComponent}
 
                 ]}
 

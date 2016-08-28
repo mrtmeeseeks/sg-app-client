@@ -18,7 +18,7 @@ import {ApplicationSubmissionsService} from "../../common/services/application_s
 })
 
 
-export class NewApplicationSubmission {
+export class NewApplicationSubmission implements OnChanges {
     @Input() template: ApplicationTemplate;
     public uploader:FileUploader;
     public hasBaseDropZoneOver:boolean = false;

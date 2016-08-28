@@ -1,0 +1,1 @@
+export {AdminDepartments} from './departments.component';

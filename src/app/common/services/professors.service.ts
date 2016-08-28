@@ -36,6 +36,14 @@ export class ProfessorsService {
             .then(res => res.json() as Professor)
             .catch(this.handleError);
     }
+
+    departments() {
+        return this.http.get(this.professorsUrl +'/departments')
+            .toPromise()
+            .then(res => res.json() as Array<string>)
+            .catch(this.handleError);
+
+    }
     
 
 
