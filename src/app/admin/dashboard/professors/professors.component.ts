@@ -32,10 +32,13 @@ export class AdminProfessors implements OnInit{
         this.loadProfessors(event.page, event.itemsPerPage);
     };
 
+    public filterDepts(department:string):void {
+        this.loadProfessors(1,10, department);
+    }
 
-    private loadProfessors(page:number, itemsPerPage: number) {
-        
-        this._service.query(page,itemsPerPage).then(listing => this.listing = listing);
+
+    private loadProfessors(page:number, itemsPerPage: number, department?:string) {
+        this._service.query(page,itemsPerPage, department).then(listing => this.listing = listing);
     }
 
    

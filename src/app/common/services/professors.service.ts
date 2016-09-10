@@ -15,8 +15,12 @@ export class ProfessorsService {
 
     }
 
-    query(page:number, itemsPerPage: number) {
-        return this.http.get(this.professorsUrl, {search:  QueryConstructor(page, itemsPerPage)})
+    query(page:number, itemsPerPage: number, department?:string ) {
+        let params = QueryConstructor(page, itemsPerPage);
+        console.log(department);
+        if(department) params.set('department' , department);
+
+        return this.http.get(this.professorsUrl, {search:params })
             .toPromise()
             .then(res => {
                 let body = res.json();

@@ -1,10 +1,11 @@
-<span dropdown (onToggle)="toggled($event)">
+<span dropdown >
     <a id="simple-dropdown" dropdownToggle>
       Select a department
     </a>
     <ul class="dropdown-menu" dropdownMenu aria-labelledby="simple-dropdown">
+
       <li *ngFor="let department of departments">
-        <a class="dropdown-item">{{department}}</a>
+        <a (click)="selectItem(department)" class="dropdown-item">{{department}}</a>
       </li>
     </ul>
   </span>

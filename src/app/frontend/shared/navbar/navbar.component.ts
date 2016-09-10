@@ -31,6 +31,10 @@ export class HomeNavbar {
             {
                 name: 'Applications',
                 url: '/applications'
+            },
+            {
+                name: 'Evaluations',
+                url: '/evaluations'
             }
         ]
     }

@@ -1,0 +1,23 @@
+<navbar></navbar>
+<div class="container">
+
+    <h1 class="display-4">Professor Evaluations</h1>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="card-deck-wrapper">
+                <div class="card-deck">
+                    <div class="card" *ngFor="let professor of listing.collection">
+                        <img class="card-img-top img-thumbnail" src="{{professor.photo}}">
+                        <div class="card-block">
+                            <h4 class="card-title">{{professor.name}}</h4>
+                            <p>{{professor.department}}</p>
+                            <a routerLink="{{professor.id}}"  class="btn btn-primary">Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <pagination [totalItems]="listing.count" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>
+</div>
+<footer></footer>

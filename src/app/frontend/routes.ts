@@ -8,6 +8,7 @@ import {FrontClubs} from "./clubs/clubs.component";
 import {FrontInternships} from "./internships/internships.component";
 import {FrontApplicationTemplates} from "./applications/application_templates.component";
 import {FrontPostDetail} from "./posts/post-detail.component";
+import {FrontProfessors} from "./evaluations/evaluations.component";
 
 
 export const FrontEndRoutes:RouterConfig = [
@@ -17,5 +18,6 @@ export const FrontEndRoutes:RouterConfig = [
     { path: 'clubs' , component: FrontClubs},
     { path: 'internships' , component: FrontInternships},
     { path: 'applications' , component: FrontApplicationTemplates },
-    { path: 'post/:id', component: FrontPostDetail}
+    { path: 'post/:id', component: FrontPostDetail},
+    { path: 'evaluations' , component: FrontProfessors}
 ];
